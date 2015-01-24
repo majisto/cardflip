@@ -10,6 +10,8 @@
 #import "Card.h"
 
 @interface Deck : NSObject
+-(void) addCard:(Card*) card atTop:(bool) atTop;
+-(void) addCard:(Card*) card;
 -(Card *) drawRandCard;
 
 @end
