@@ -8,6 +8,10 @@
 
 #import "Card.h"
 
+@interface Card() //Private declaration
+
+@end
+
 @implementation Card
 
 @end
