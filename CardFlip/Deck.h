@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "Card.h"
+#import "PlayingCard.h"
 
 @interface Deck : NSObject
 -(void) addCard:(Card*) card atTop:(bool) atTop;
 -(void) addCard:(Card*) card;
--(Card *) drawRandCard;
+-(PlayingCard *) drawRandCard;
+-(NSUInteger) numCards;
 
 @end

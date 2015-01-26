@@ -7,6 +7,7 @@
 //
 
 #import "Deck.h"
+#import "PlayingCard.h"
 
 @interface Deck()
 @property (strong, nonatomic) NSMutableArray *cards; //Array of cards in deck
@@ -30,9 +31,14 @@
     }
 }
 
--(Card *) drawRandCard
+-(NSUInteger) numCards
 {
-    Card * randCard = nil;
+    return [self.cards count];
+}
+
+-(PlayingCard *) drawRandCard
+{
+    PlayingCard * randCard = nil;
     
     if ([self.cards count]){
         unsigned index = arc4random() % [self.cards count];

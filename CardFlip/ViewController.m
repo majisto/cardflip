@@ -7,12 +7,40 @@
 //
 
 #import "ViewController.h"
+#import "PlayingCardDeck.h"
+#import "PlayingCard.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shuffleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cardsDeckLabel;
+@property (nonatomic) int flipCount;
+@property (nonatomic) NSUInteger cardsInDeck;
+@property (nonatomic) int numShuffles;
+@property (strong, nonatomic) Deck *myDeck;
 @end
 
 @implementation ViewController
+
+-(Deck *) myDeck{
+    if (!_myDeck) {_myDeck = [[PlayingCardDeck alloc] init]; self.numShuffles++;}
+    return _myDeck;
+}
+
+- (void)setCardsInDeck:(NSUInteger)cardsInDeck{
+    _cardsInDeck = cardsInDeck;
+    self.cardsDeckLabel.text = [NSString stringWithFormat:@"Cards in deck: %lu", (unsigned long)self.cardsInDeck];
+}
+
+- (void)setFlipCount:(int)flipCount{
+    _flipCount = flipCount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+}
+
+- (void)setNumShuffles:(int)numShuffles{
+    _numShuffles = numShuffles;
+    self.shuffleLabel.text = [NSString stringWithFormat:@"No. of Shuffles: %d", self.numShuffles];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,11 +54,27 @@
 }
 
 - (IBAction)card_click:(id)sender {
-    NSLog(@"The value of face_up_down is %d",self.face_up_down);
     if (self.face_up_down) //True is face up
+    {
         [sender setBackgroundImage:[UIImage imageNamed:@"pokedoge"] forState:UIControlStateNormal];
+        [sender setTitle:@"" forState:UIControlStateNormal];
+    }
     else
+    {
+        PlayingCard * randCard = [self.myDeck drawRandCard];
+        if (!randCard) {
+            _myDeck = [[PlayingCardDeck alloc] init];
+            self.flipCount = 0;
+            self.cardsInDeck = 52;
+            randCard = [self.myDeck drawRandCard];
+            self.numShuffles++;
+        }
+        NSLog(@"%@", randCard.contents);
         [sender setBackgroundImage:[UIImage imageNamed:@"white_image"] forState:UIControlStateNormal];
+        [sender setTitle:randCard.contents forState:UIControlStateNormal];
+        self.cardsInDeck = _myDeck.numCards;
+        self.flipCount++;
+    }
     self.face_up_down = !self.face_up_down;
 }
 

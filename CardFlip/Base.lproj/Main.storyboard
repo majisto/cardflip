@@ -19,30 +19,70 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-aX-apu">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" backgroundImage="pokedoge">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="77" y="232" width="227" height="186"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <rect key="frame" x="93" y="78" width="189" height="299"/>
                                 </variation>
                                 <connections>
                                     <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lQ9-Ou-5vP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flipped Cards: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crC-CR-AHR">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="398" width="181" height="34"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Shuffles: 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="435" width="181" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards in deck: 52" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMl-5R-Mxi">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="464" width="181" height="22"/>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" red="0.10588236153125763" green="0.55686277151107788" blue="0.090196080505847931" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="1RT-aX-apu"/>
+                                <exclude reference="crC-CR-AHR"/>
+                                <exclude reference="1Sk-R8-asZ"/>
+                                <exclude reference="oMl-5R-Mxi"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="1RT-aX-apu"/>
+                                <include reference="crC-CR-AHR"/>
+                                <include reference="1Sk-R8-asZ"/>
+                                <include reference="oMl-5R-Mxi"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cardsDeckLabel" destination="oMl-5R-Mxi" id="FEN-VW-p8u"/>
+                        <outlet property="flipsLabel" destination="crC-CR-AHR" id="mJP-ez-S50"/>
+                        <outlet property="shuffleLabel" destination="1Sk-R8-asZ" id="chP-BB-WDn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
