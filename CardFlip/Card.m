@@ -14,6 +14,14 @@
 
 @implementation Card
 
+- (BOOL) match:(Card *) card
+{
+    if ([self.contents isEqualToString:card.contents])
+        return 1;
+    else
+        return 0;
+}
+
 @end
 
 

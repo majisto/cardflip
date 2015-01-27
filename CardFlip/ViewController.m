@@ -18,6 +18,7 @@
 @property (nonatomic) NSUInteger cardsInDeck;
 @property (nonatomic) int numShuffles;
 @property (strong, nonatomic) Deck *myDeck;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonArray;
 @end
 
 @implementation ViewController

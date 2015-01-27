@@ -23,7 +23,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="93" y="398" width="181" height="34"/>
+                                    <rect key="frame" x="16" y="573" width="181" height="34"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Re-Shuffles: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
@@ -32,7 +32,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="93" y="435" width="181" height="21"/>
+                                    <rect key="frame" x="16" y="615" width="181" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards in deck: 52" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMl-5R-Mxi">
@@ -41,21 +41,427 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="93" y="464" width="181" height="22"/>
+                                    <rect key="frame" x="16" y="637" width="181" height="22"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-aX-apu">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" backgroundImage="pokedoge">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <rect key="frame" x="93" y="75" width="189" height="299"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="20" width="58" height="73"/>
                                 </variation>
                                 <connections>
                                     <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lQ9-Ou-5vP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dF-A7-NTS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="87" y="20" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z6B-Be-ATE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-yt-T90">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="158" y="20" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w81-GJ-Nsf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDV-3f-zu6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="230" y="20" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="grA-H9-041"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWz-H3-To5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="101" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PZx-6I-jin"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8i6-De-qut">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="187" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AkG-9G-wnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCo-Gi-2Ew">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="359" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="43Q-dv-WvX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XB-KO-RQn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="158" y="101" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t1F-HC-chu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7W-Xc-fYC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="230" y="101" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rLz-qN-2Aa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BH-5H-nTt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="301" y="101" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nj8-PP-F4v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak0-ZN-Hmx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="87" y="101" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sYC-BQ-y2w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV1-ke-wW1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="273" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xbo-6Z-tPP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HZ-g0-MbQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="301" y="20" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="C0v-Zv-L69"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqi-hl-GPv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="87" y="187" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Tb-Vi-aXZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XO-Fd-TwW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="445" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dRH-Os-MFe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD0-6o-ItY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="87" y="273" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QTV-Mg-ZQ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7l3-58-ziG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="301" y="273" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ria-Nx-Qin"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFI-T9-804">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="301" y="187" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zdp-3v-BEZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1f8-VE-q41">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="230" y="187" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7Ye-i6-VO7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKq-2H-fdb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="158" y="187" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BTx-Wf-deF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9x-dM-UGj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="158" y="359" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8hk-Oj-qpC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2E-dS-wsg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="230" y="359" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ccI-Sg-Jx3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tM-4n-b4f">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="301" y="359" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lb1-JA-R22"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rK0-VX-E98">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="158" y="273" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sUy-AV-i4Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-it-mYe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="230" y="273" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DTn-ms-oob"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pou-3r-Lo4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="158" y="445" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uhd-1D-lCr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdP-Xa-DMd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="230" y="445" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MPg-tg-8BG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-jP-Fa5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="301" y="445" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rn4-Rp-vXH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnt-FF-gxo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="87" y="359" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="o2g-X0-j66"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nti-uJ-cSm">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="87" y="445" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="T1I-Jh-Sog"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,6 +472,35 @@
                                 <exclude reference="1Sk-R8-asZ"/>
                                 <exclude reference="oMl-5R-Mxi"/>
                                 <exclude reference="1RT-aX-apu"/>
+                                <exclude reference="3dF-A7-NTS"/>
+                                <exclude reference="WXQ-yt-T90"/>
+                                <exclude reference="jDV-3f-zu6"/>
+                                <exclude reference="gWz-H3-To5"/>
+                                <exclude reference="8i6-De-qut"/>
+                                <exclude reference="mCo-Gi-2Ew"/>
+                                <exclude reference="5XB-KO-RQn"/>
+                                <exclude reference="N7W-Xc-fYC"/>
+                                <exclude reference="0BH-5H-nTt"/>
+                                <exclude reference="Ak0-ZN-Hmx"/>
+                                <exclude reference="IV1-ke-wW1"/>
+                                <exclude reference="8HZ-g0-MbQ"/>
+                                <exclude reference="Mqi-hl-GPv"/>
+                                <exclude reference="6XO-Fd-TwW"/>
+                                <exclude reference="QD0-6o-ItY"/>
+                                <exclude reference="7l3-58-ziG"/>
+                                <exclude reference="MFI-T9-804"/>
+                                <exclude reference="1f8-VE-q41"/>
+                                <exclude reference="bKq-2H-fdb"/>
+                                <exclude reference="n9x-dM-UGj"/>
+                                <exclude reference="e2E-dS-wsg"/>
+                                <exclude reference="9tM-4n-b4f"/>
+                                <exclude reference="rK0-VX-E98"/>
+                                <exclude reference="Ldx-it-mYe"/>
+                                <exclude reference="pou-3r-Lo4"/>
+                                <exclude reference="sdP-Xa-DMd"/>
+                                <exclude reference="6kT-jP-Fa5"/>
+                                <exclude reference="xnt-FF-gxo"/>
+                                <exclude reference="Nti-uJ-cSm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -74,6 +509,35 @@
                                 <include reference="1Sk-R8-asZ"/>
                                 <include reference="oMl-5R-Mxi"/>
                                 <include reference="1RT-aX-apu"/>
+                                <include reference="3dF-A7-NTS"/>
+                                <include reference="WXQ-yt-T90"/>
+                                <include reference="jDV-3f-zu6"/>
+                                <include reference="gWz-H3-To5"/>
+                                <include reference="8i6-De-qut"/>
+                                <include reference="mCo-Gi-2Ew"/>
+                                <include reference="5XB-KO-RQn"/>
+                                <include reference="N7W-Xc-fYC"/>
+                                <include reference="0BH-5H-nTt"/>
+                                <include reference="Ak0-ZN-Hmx"/>
+                                <include reference="IV1-ke-wW1"/>
+                                <include reference="8HZ-g0-MbQ"/>
+                                <include reference="Mqi-hl-GPv"/>
+                                <include reference="6XO-Fd-TwW"/>
+                                <include reference="QD0-6o-ItY"/>
+                                <include reference="7l3-58-ziG"/>
+                                <include reference="MFI-T9-804"/>
+                                <include reference="1f8-VE-q41"/>
+                                <include reference="bKq-2H-fdb"/>
+                                <include reference="n9x-dM-UGj"/>
+                                <include reference="e2E-dS-wsg"/>
+                                <include reference="9tM-4n-b4f"/>
+                                <include reference="rK0-VX-E98"/>
+                                <include reference="Ldx-it-mYe"/>
+                                <include reference="pou-3r-Lo4"/>
+                                <include reference="sdP-Xa-DMd"/>
+                                <include reference="6kT-jP-Fa5"/>
+                                <include reference="xnt-FF-gxo"/>
+                                <include reference="Nti-uJ-cSm"/>
                             </mask>
                         </variation>
                     </view>
@@ -82,6 +546,7 @@
                         <outlet property="cardsDeckLabel" destination="oMl-5R-Mxi" id="FEN-VW-p8u"/>
                         <outlet property="flipsLabel" destination="crC-CR-AHR" id="mJP-ez-S50"/>
                         <outlet property="shuffleLabel" destination="1Sk-R8-asZ" id="chP-BB-WDn"/>
+                        <outletCollection property="buttonArray" destination="8HZ-g0-MbQ" id="8r8-MN-DZ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
