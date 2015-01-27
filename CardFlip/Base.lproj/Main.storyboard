@@ -17,20 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-aX-apu">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" backgroundImage="pokedoge">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <rect key="frame" x="93" y="78" width="189" height="299"/>
-                                </variation>
-                                <connections>
-                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lQ9-Ou-5vP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flipped Cards: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crC-CR-AHR">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,7 +26,7 @@
                                     <rect key="frame" x="93" y="398" width="181" height="34"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Shuffles: 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Re-Shuffles: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -58,22 +44,36 @@
                                     <rect key="frame" x="93" y="464" width="181" height="22"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-aX-apu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <rect key="frame" x="93" y="75" width="189" height="299"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lQ9-Ou-5vP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10588236153125763" green="0.55686277151107788" blue="0.090196080505847931" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="1RT-aX-apu"/>
                                 <exclude reference="crC-CR-AHR"/>
                                 <exclude reference="1Sk-R8-asZ"/>
                                 <exclude reference="oMl-5R-Mxi"/>
+                                <exclude reference="1RT-aX-apu"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="1RT-aX-apu"/>
                                 <include reference="crC-CR-AHR"/>
                                 <include reference="1Sk-R8-asZ"/>
                                 <include reference="oMl-5R-Mxi"/>
+                                <include reference="1RT-aX-apu"/>
                             </mask>
                         </variation>
                     </view>

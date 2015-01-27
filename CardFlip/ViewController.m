@@ -23,7 +23,7 @@
 @implementation ViewController
 
 -(Deck *) myDeck{
-    if (!_myDeck) {_myDeck = [[PlayingCardDeck alloc] init]; self.numShuffles++;}
+    if (!_myDeck) {_myDeck = [[PlayingCardDeck alloc] init];}
     return _myDeck;
 }
 
@@ -39,7 +39,7 @@
 
 - (void)setNumShuffles:(int)numShuffles{
     _numShuffles = numShuffles;
-    self.shuffleLabel.text = [NSString stringWithFormat:@"No. of Shuffles: %d", self.numShuffles];
+    self.shuffleLabel.text = [NSString stringWithFormat:@"No. of Re-Shuffles: %d", self.numShuffles];
 }
 
 - (void)viewDidLoad {
@@ -62,14 +62,13 @@
     else
     {
         PlayingCard * randCard = [self.myDeck drawRandCard];
-        if (!randCard) {
+        if (!randCard) { //If no cards in deck, re-shuffle by re-creating the myDeck object.
             _myDeck = [[PlayingCardDeck alloc] init];
             self.flipCount = 0;
             self.cardsInDeck = 52;
             randCard = [self.myDeck drawRandCard];
             self.numShuffles++;
         }
-        NSLog(@"%@", randCard.contents);
         [sender setBackgroundImage:[UIImage imageNamed:@"white_image"] forState:UIControlStateNormal];
         [sender setTitle:randCard.contents forState:UIControlStateNormal];
         self.cardsInDeck = _myDeck.numCards;
