@@ -7,8 +7,14 @@
 //
 
 #import "PlayingCard.h"
+#import "Card.h"
 
 @implementation PlayingCard
+
+- (int) match:(Card *) card
+{
+    return 0; //Change this.
+}
 
 + (NSArray *) validRanks
 {

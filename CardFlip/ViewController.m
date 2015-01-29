@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PlayingCardDeck.h"
 #import "PlayingCard.h"
+#import "MatchingGame.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -19,6 +20,7 @@
 @property (nonatomic) int numShuffles;
 @property (strong, nonatomic) Deck *myDeck;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonArray;
+@property (strong, nonatomic) MatchingGame *game;
 @end
 
 @implementation ViewController
@@ -26,6 +28,11 @@
 -(Deck *) myDeck{
     if (!_myDeck) {_myDeck = [[PlayingCardDeck alloc] init];}
     return _myDeck;
+}
+
+-(MatchingGame *) game{
+    if (!_game) {_game = [[MatchingGame alloc] init:20];}
+    return _game;
 }
 
 - (void)setCardsInDeck:(NSUInteger)cardsInDeck{
@@ -55,6 +62,8 @@
 }
 
 - (IBAction)card_click:(id)sender {
+    Card * a = [self.game cardAtIndex:0];
+    NSLog(@"Random card is: %@", a.contents);
     if (self.face_up_down) //True is face up
     {
         [sender setBackgroundImage:[UIImage imageNamed:@"pokedoge"] forState:UIControlStateNormal];

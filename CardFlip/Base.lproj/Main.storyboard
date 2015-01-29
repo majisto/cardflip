@@ -23,7 +23,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="573" width="181" height="34"/>
+                                    <rect key="frame" x="16" y="583" width="181" height="34"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Re-Shuffles: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
@@ -464,6 +464,32 @@
                                     <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="T1I-Jh-Sog"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HH-0T-rOz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Peek">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="545" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-eB-mUB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.93725496529999996" green="0.1098039299" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="151" y="545" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6H3-cA-GGQ">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="301" y="544" width="51" height="31"/>
+                                </variation>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.10588236153125763" green="0.55686277151107788" blue="0.090196080505847931" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
@@ -501,6 +527,9 @@
                                 <exclude reference="6kT-jP-Fa5"/>
                                 <exclude reference="xnt-FF-gxo"/>
                                 <exclude reference="Nti-uJ-cSm"/>
+                                <exclude reference="0HH-0T-rOz"/>
+                                <exclude reference="as8-eB-mUB"/>
+                                <exclude reference="6H3-cA-GGQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -538,6 +567,9 @@
                                 <include reference="6kT-jP-Fa5"/>
                                 <include reference="xnt-FF-gxo"/>
                                 <include reference="Nti-uJ-cSm"/>
+                                <include reference="0HH-0T-rOz"/>
+                                <include reference="as8-eB-mUB"/>
+                                <include reference="6H3-cA-GGQ"/>
                             </mask>
                         </variation>
                     </view>
