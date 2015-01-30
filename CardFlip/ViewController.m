@@ -19,11 +19,38 @@
 @property (nonatomic) NSUInteger cardsInDeck;
 @property (nonatomic) int numShuffles;
 @property (strong, nonatomic) Deck *myDeck;
+
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonArray;
+
 @property (strong, nonatomic) MatchingGame *game;
 @end
 
 @implementation ViewController
+
+- (IBAction)peekClick:(UIButton *)sender {
+    if (!self.peeked){
+        int i = 0;
+        for (UIButton* b in self.buttonArray){
+            [b setBackgroundImage:[UIImage imageNamed:@"white_image"] forState:UIControlStateNormal];
+//            Card * card = [self.game cardAtIndex:i];
+//            [b setTitle:card.contents forState:UIControlStateNormal];
+            [b setTitle:@(i).stringValue forState:UIControlStateNormal];
+            i++;
+        }
+        self.peeked = true;
+    }
+    else{
+        for (UIButton* b in self.buttonArray){
+            [b setBackgroundImage:[UIImage imageNamed:@"pokedoge"] forState:UIControlStateNormal];
+            [b setTitle:@"" forState:UIControlStateNormal];
+        }
+        self.peeked = false;
+    }
+}
+
+- (IBAction)resetClick:(UIButton *)sender {
+    NSLog(@"Reset Button clicked!");
+}
 
 -(Deck *) myDeck{
     if (!_myDeck) {_myDeck = [[PlayingCardDeck alloc] init];}
@@ -31,7 +58,7 @@
 }
 
 -(MatchingGame *) game{
-    if (!_game) {_game = [[MatchingGame alloc] init:20];}
+    if (!_game) {_game = [[MatchingGame alloc] init:29];}
     return _game;
 }
 
@@ -53,16 +80,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.face_up_down = false;
+    self.peeked = false;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)card_click:(id)sender {
-    Card * a = [self.game cardAtIndex:0];
+    unsigned index = arc4random() % 20;
+    NSLog(@"Index is: %d",index);
+    Card * a = [self.game cardAtIndex:index];
     NSLog(@"Random card is: %@", a.contents);
     if (self.face_up_down) //True is face up
     {

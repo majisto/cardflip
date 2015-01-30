@@ -11,9 +11,13 @@
 #import "PlayingCardDeck.h"
 
 @interface MatchingGame ()
-@property (nonatomic, readwrite) NSInteger score;
+@property (nonatomic, readwrite) NSInteger total_score;
+@property (nonatomic, readwrite) double_t average_score;
+@property (nonatomic, readwrite) NSInteger games_played;
+@property (nonatomic, readwrite) NSInteger previous_score;
 @property (nonatomic, strong) NSMutableArray *cards;
-@property (strong, nonatomic) Deck *myDeck;
+@property (nonatomic, readwrite) BOOL three_card;
+@property (strong, nonatomic) PlayingCardDeck *myDeck;
 @end
 
 @implementation MatchingGame

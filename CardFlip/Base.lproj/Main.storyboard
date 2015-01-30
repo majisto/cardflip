@@ -17,31 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flipped Cards: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crC-CR-AHR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crC-CR-AHR">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="583" width="181" height="34"/>
+                                    <rect key="frame" x="16" y="597" width="181" height="34"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Re-Shuffles: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="615" width="181" height="21"/>
+                                    <rect key="frame" x="16" y="638" width="181" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards in deck: 52" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMl-5R-Mxi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games Played: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMl-5R-Mxi">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="637" width="181" height="22"/>
+                                    <rect key="frame" x="188" y="603" width="181" height="22"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-aX-apu">
@@ -471,18 +471,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="545" width="46" height="30"/>
+                                    <rect key="frame" x="16" y="545" width="39" height="32"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-eB-mUB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.93725496529999996" green="0.1098039299" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="545" width="46" height="30"/>
-                                </variation>
+                                <connections>
+                                    <action selector="peekClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zXt-9A-oZy"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6H3-cA-GGQ">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
@@ -490,6 +483,27 @@
                                     <rect key="frame" x="301" y="544" width="51" height="31"/>
                                 </variation>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-UR-l43">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="188" y="633" width="171" height="26"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-eB-mUB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.93725496529999996" green="0.1098039299" blue="0.03529411927" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="151" y="545" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G5V-y8-jcf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10588236153125763" green="0.55686277151107788" blue="0.090196080505847931" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
@@ -528,8 +542,9 @@
                                 <exclude reference="xnt-FF-gxo"/>
                                 <exclude reference="Nti-uJ-cSm"/>
                                 <exclude reference="0HH-0T-rOz"/>
-                                <exclude reference="as8-eB-mUB"/>
                                 <exclude reference="6H3-cA-GGQ"/>
+                                <exclude reference="6V2-UR-l43"/>
+                                <exclude reference="as8-eB-mUB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -568,8 +583,9 @@
                                 <include reference="xnt-FF-gxo"/>
                                 <include reference="Nti-uJ-cSm"/>
                                 <include reference="0HH-0T-rOz"/>
-                                <include reference="as8-eB-mUB"/>
                                 <include reference="6H3-cA-GGQ"/>
+                                <include reference="6V2-UR-l43"/>
+                                <include reference="as8-eB-mUB"/>
                             </mask>
                         </variation>
                     </view>
@@ -579,11 +595,40 @@
                         <outlet property="flipsLabel" destination="crC-CR-AHR" id="mJP-ez-S50"/>
                         <outlet property="shuffleLabel" destination="1Sk-R8-asZ" id="chP-BB-WDn"/>
                         <outletCollection property="buttonArray" destination="8HZ-g0-MbQ" id="8r8-MN-DZ0"/>
+                        <outletCollection property="buttonArray" destination="jDV-3f-zu6" id="KPC-Sz-2v2"/>
+                        <outletCollection property="buttonArray" destination="WXQ-yt-T90" id="q8N-ua-URe"/>
+                        <outletCollection property="buttonArray" destination="3dF-A7-NTS" id="ezX-LT-sJr"/>
+                        <outletCollection property="buttonArray" destination="1RT-aX-apu" id="Fir-Ku-veN"/>
+                        <outletCollection property="buttonArray" destination="gWz-H3-To5" id="9JS-oV-sXI"/>
+                        <outletCollection property="buttonArray" destination="Ak0-ZN-Hmx" id="oCS-RP-TUy"/>
+                        <outletCollection property="buttonArray" destination="5XB-KO-RQn" id="mGn-gy-0EQ"/>
+                        <outletCollection property="buttonArray" destination="N7W-Xc-fYC" id="r8V-Q9-sWi"/>
+                        <outletCollection property="buttonArray" destination="0BH-5H-nTt" id="r4R-ea-2Lf"/>
+                        <outletCollection property="buttonArray" destination="MFI-T9-804" id="liF-fF-6A8"/>
+                        <outletCollection property="buttonArray" destination="1f8-VE-q41" id="7J4-Km-ZS3"/>
+                        <outletCollection property="buttonArray" destination="bKq-2H-fdb" id="or5-Pg-875"/>
+                        <outletCollection property="buttonArray" destination="Mqi-hl-GPv" id="b2e-1j-gVl"/>
+                        <outletCollection property="buttonArray" destination="8i6-De-qut" id="omc-KO-VSM"/>
+                        <outletCollection property="buttonArray" destination="IV1-ke-wW1" id="jlF-9r-IOr"/>
+                        <outletCollection property="buttonArray" destination="QD0-6o-ItY" id="KQo-s0-p1C"/>
+                        <outletCollection property="buttonArray" destination="rK0-VX-E98" id="Aix-bA-5el"/>
+                        <outletCollection property="buttonArray" destination="Ldx-it-mYe" id="awT-Qo-K5z"/>
+                        <outletCollection property="buttonArray" destination="7l3-58-ziG" id="gsr-DV-ydH"/>
+                        <outletCollection property="buttonArray" destination="9tM-4n-b4f" id="kJU-z4-EQU"/>
+                        <outletCollection property="buttonArray" destination="e2E-dS-wsg" id="0MD-aT-SRt"/>
+                        <outletCollection property="buttonArray" destination="n9x-dM-UGj" id="xxU-wW-nAs"/>
+                        <outletCollection property="buttonArray" destination="xnt-FF-gxo" id="QKK-hE-MZp"/>
+                        <outletCollection property="buttonArray" destination="mCo-Gi-2Ew" id="AWw-Qi-hKf"/>
+                        <outletCollection property="buttonArray" destination="6XO-Fd-TwW" id="nQK-Vh-QUM"/>
+                        <outletCollection property="buttonArray" destination="Nti-uJ-cSm" id="I8H-n7-53f"/>
+                        <outletCollection property="buttonArray" destination="pou-3r-Lo4" id="Ika-CG-ZV1"/>
+                        <outletCollection property="buttonArray" destination="sdP-Xa-DMd" id="bGw-yL-9PK"/>
+                        <outletCollection property="buttonArray" destination="6kT-jP-Fa5" id="3nV-Ia-AHv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748.5" y="166.125"/>
+            <point key="canvasLocation" x="750.5" y="171.375"/>
         </scene>
     </scenes>
     <resources>

@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 @property (nonatomic) BOOL face_up_down;
+@property (nonatomic) BOOL peeked;
 
 @end
 
