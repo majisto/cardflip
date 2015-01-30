@@ -591,8 +591,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="cardsDeckLabel" destination="oMl-5R-Mxi" id="FEN-VW-p8u"/>
                         <outlet property="flipsLabel" destination="crC-CR-AHR" id="mJP-ez-S50"/>
+                        <outlet property="games_playedLabel" destination="oMl-5R-Mxi" id="c3K-WJ-iWt"/>
                         <outlet property="shuffleLabel" destination="1Sk-R8-asZ" id="chP-BB-WDn"/>
                         <outletCollection property="buttonArray" destination="8HZ-g0-MbQ" id="8r8-MN-DZ0"/>
                         <outletCollection property="buttonArray" destination="jDV-3f-zu6" id="KPC-Sz-2v2"/>
