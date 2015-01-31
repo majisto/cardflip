@@ -7,13 +7,19 @@
 //
 
 #import "PlayingCard.h"
-#import "Card.h"
+
 
 @implementation PlayingCard
 
-- (int) match:(Card *) card
+- (int) match:(NSArray *) cards
 {
-    return 0; //Change this.
+    int score = 0;
+    if ([cards count] == 1){
+        PlayingCard *card = [cards firstObject];
+        
+    }
+    
+    return score;
 }
 
 + (NSArray *) validRanks

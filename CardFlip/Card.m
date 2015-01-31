@@ -14,12 +14,15 @@
 
 @implementation Card
 
-- (int) match:(Card *) card
+- (int) match:(NSArray *) cards
 {
-    if ([self.contents isEqualToString:card.contents])
-        return 1;
-    else
-        return 0;
+    int score = 0;
+    
+    for (Card* c in cards){
+        if ([c.contents isEqualToString:self.contents])
+            score = 1;
+    }
+    return score;
 }
 
 @end

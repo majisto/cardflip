@@ -51,4 +51,11 @@
     return [self.cards objectAtIndex:index];
 }
 
+- (void)printCards{
+    int i = 0;
+    for (PlayingCard *card in _cards){
+        NSLog(@"Card %d: %@",i,card.contents); ++i;
+    }
+}
+
 @end

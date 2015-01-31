@@ -90,33 +90,35 @@
     [super viewDidLoad];
     self.face_up_down = false;
     self.peeked = false;
+    [self.game printCards];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (IBAction)card_click:(id)sender {
-    unsigned index = arc4random() % 20;
-    NSLog(@"Index is: %d",index);
+    NSUInteger index = [self.buttonArray indexOfObject:sender];
+    NSLog(@"Index from sender is: %lu",(unsigned long)index);
     Card * a = [self.game cardAtIndex:index];
-    NSLog(@"Random card is: %@", a.contents);
-    if (self.face_up_down) //True is face up
-    {
-        [sender setBackgroundImage:[UIImage imageNamed:@"pokedoge"] forState:UIControlStateNormal];
-        [sender setTitle:@"" forState:UIControlStateNormal];
-    }
-    else
-    {
-        PlayingCard * randCard = [self.myDeck drawRandCard];
-        if (!randCard) { //If no cards in deck, re-shuffle by re-creating the myDeck object.
-            _myDeck = [[PlayingCardDeck alloc] init];
-            self.flipCount = 0;
-            randCard = [self.myDeck drawRandCard];
-            self.numShuffles++;
-        }
-        [sender setBackgroundImage:[UIImage imageNamed:@"white_image"] forState:UIControlStateNormal];
-        [sender setTitle:randCard.contents forState:UIControlStateNormal];
-        self.flipCount++;
-    }
-    self.face_up_down = !self.face_up_down;
+    NSLog(@"Card at button index %lu is: %@",index, a.contents);
+    
+//    if (self.face_up_down) //True is face up
+//    {
+//        [sender setBackgroundImage:[UIImage imageNamed:@"pokedoge"] forState:UIControlStateNormal];
+//        [sender setTitle:@"" forState:UIControlStateNormal];
+//    }
+//    else
+//    {
+//        PlayingCard * randCard = [self.myDeck drawRandCard];
+//        if (!randCard) { //If no cards in deck, re-shuffle by re-creating the myDeck object.
+//            _myDeck = [[PlayingCardDeck alloc] init];
+//            self.flipCount = 0;
+//            randCard = [self.myDeck drawRandCard];
+//            self.numShuffles++;
+//        }
+//        [sender setBackgroundImage:[UIImage imageNamed:@"white_image"] forState:UIControlStateNormal];
+//        [sender setTitle:randCard.contents forState:UIControlStateNormal];
+//        self.flipCount++;
+//    }
+//    self.face_up_down = !self.face_up_down;
 }
 
 @end

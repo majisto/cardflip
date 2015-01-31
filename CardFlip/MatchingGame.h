@@ -15,7 +15,8 @@
 @property (nonatomic, readonly) double_t average_score;
 @property (nonatomic, readonly) NSInteger games_played;
 @property (nonatomic, readonly) NSInteger previous_score;
-@property (nonatomic, readonly) BOOL three_card; //True means three_card
+@property (nonatomic, readonly) BOOL three_card; //True means three_card.
 - (Card *)cardAtIndex:(NSUInteger) index;
 - (instancetype) init:(NSUInteger)count;
+- (void) printCards; //Prints all cards in game to NSLog.
 @end
