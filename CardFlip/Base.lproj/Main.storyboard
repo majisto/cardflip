@@ -50,26 +50,15 @@
                                 <state key="normal" backgroundImage="pokedoge">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                     <rect key="frame" x="16" y="20" width="58" height="73"/>
                                 </variation>
                                 <connections>
                                     <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lQ9-Ou-5vP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dF-A7-NTS">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="pokedoge">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                    <rect key="frame" x="87" y="20" width="58" height="73"/>
-                                </variation>
-                                <connections>
-                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z6B-Be-ATE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-yt-T90">
@@ -504,6 +493,20 @@
                                     <action selector="resetClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G5V-y8-jcf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dF-A7-NTS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="87" y="20" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z6B-Be-ATE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10588236149999999" green="0.55686277149999996" blue="0.090196080509999998" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
@@ -512,7 +515,6 @@
                                 <exclude reference="1Sk-R8-asZ"/>
                                 <exclude reference="oMl-5R-Mxi"/>
                                 <exclude reference="1RT-aX-apu"/>
-                                <exclude reference="3dF-A7-NTS"/>
                                 <exclude reference="WXQ-yt-T90"/>
                                 <exclude reference="jDV-3f-zu6"/>
                                 <exclude reference="gWz-H3-To5"/>
@@ -545,6 +547,7 @@
                                 <exclude reference="6H3-cA-GGQ"/>
                                 <exclude reference="6V2-UR-l43"/>
                                 <exclude reference="as8-eB-mUB"/>
+                                <exclude reference="3dF-A7-NTS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -553,7 +556,6 @@
                                 <include reference="1Sk-R8-asZ"/>
                                 <include reference="oMl-5R-Mxi"/>
                                 <include reference="1RT-aX-apu"/>
-                                <include reference="3dF-A7-NTS"/>
                                 <include reference="WXQ-yt-T90"/>
                                 <include reference="jDV-3f-zu6"/>
                                 <include reference="gWz-H3-To5"/>
@@ -586,6 +588,7 @@
                                 <include reference="6H3-cA-GGQ"/>
                                 <include reference="6V2-UR-l43"/>
                                 <include reference="as8-eB-mUB"/>
+                                <include reference="3dF-A7-NTS"/>
                             </mask>
                         </variation>
                     </view>

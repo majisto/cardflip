@@ -14,7 +14,7 @@
 @property (nonatomic, readwrite) int total_score;
 @property (nonatomic, readwrite) double_t average_score;
 @property (nonatomic, readwrite) NSInteger games_played;
-@property (nonatomic, readwrite) NSInteger previous_score;
+@property (nonatomic, readwrite) int previous_score;
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (nonatomic, readwrite) BOOL three_card;
 @property (strong, nonatomic) PlayingCardDeck *myDeck;
@@ -55,11 +55,35 @@
 }
 
 - (void) resolveClick:(NSUInteger) index{
-    self.total_score -= 1;
     PlayingCard *card = [self cardAtIndex:index];
+    if ([self checkForSameCard:card]) return;
 //    NSLog(@"Resolve Click's Playing Card is: %@",card.contents);
     [self.chosen_cards addObject:card];
+    card.chosen = true;
 //    NSLog(@"Size of chosen_cards array: %lu",(unsigned long)[self.chosen_cards count]);
+    if ([self.chosen_cards count] == 1)
+        self.total_score -= 1;
+    else if ([self.chosen_cards count] == 2){
+        int new_score = [PlayingCard match:_chosen_cards];
+        for (PlayingCard * c in _chosen_cards){
+            c.matched = true;
+        }
+        [self.chosen_cards removeAllObjects];
+        self.previous_score = new_score;
+        self.total_score += new_score;
+    }
+}
+
+- (BOOL) checkForSameCard:(PlayingCard *) card{
+    if ([self.chosen_cards containsObject:card]) {
+        //Card already chosen, flip back over and add lost point back.
+        card.chosen = false;
+        self.total_score += 1;
+        self.previous_score = 0;
+        [self.chosen_cards removeObject:card];
+        return true;
+    }
+    return false;
 }
 
 - (PlayingCard *)cardAtIndex:(NSUInteger) index{

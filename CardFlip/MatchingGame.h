@@ -15,7 +15,7 @@
 @property (nonatomic, readonly) int total_score;
 @property (nonatomic, readonly) double_t average_score;
 @property (nonatomic, readonly) NSInteger games_played;
-@property (nonatomic, readonly) NSInteger previous_score;
+@property (nonatomic, readonly) int previous_score;
 @property (nonatomic, readonly) BOOL three_card; //True means three_card.
 - (PlayingCard *)cardAtIndex:(NSUInteger) index;
 - (instancetype) init:(NSUInteger)count;

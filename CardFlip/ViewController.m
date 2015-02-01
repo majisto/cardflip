@@ -72,13 +72,33 @@
 //    [self.game printCards];
 }
 
+- (void) updateUI{
+    self.totalScore.text = [NSString stringWithFormat:@"Total Score: %d",self.game.total_score];
+    self.previousScoreLabel.text = [NSString stringWithFormat:@"Previous Score: %d",self.game.previous_score];
+    for (UIButton * button in self.buttonArray){
+        NSUInteger index = [self.buttonArray indexOfObject:button];
+        PlayingCard *card = [self.game cardAtIndex:index];
+        [button setTitle:[self cardTitle:card] forState:UIControlStateNormal];
+        [button setBackgroundImage:[self cardImage:card] forState:UIControlStateNormal];
+        button.enabled = !card.matched;
+    }
+}
+
+- (NSString *) cardTitle:(PlayingCard *) card{
+    return card.ischosen ? [card contents] : @"";
+}
+
+- (UIImage *) cardImage:(PlayingCard *) card{
+    return [UIImage imageNamed:card.ischosen ? @"white_image" : @"pokedoge"];
+}
+
 - (IBAction)card_click:(id)sender {
     NSUInteger index = [self.buttonArray indexOfObject:sender];
 //    NSLog(@"Index from sender is: %lu",(unsigned long)index);
     Card * a = [self.game cardAtIndex:index];
 //    NSLog(@"Card at button index %lu is: %@",index, a.contents);
     [self.game resolveClick:index];
-    self.totalScore.text = [NSString stringWithFormat:@"Total Score: %d",self.game.total_score];
+    [self updateUI];
 }
 
 @end
