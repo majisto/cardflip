@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *previousScoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *games_playedLabel; //cardsDeckLabel
 @property (weak, nonatomic) IBOutlet UILabel *averageScoreLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *cardModeSlider;
+@property (weak, nonatomic) IBOutlet UILabel *cardMatchLabel;
 @property (strong, nonatomic) Deck *myDeck;@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonArray;
 @property (strong, nonatomic) MatchingGame *game;
 @end
@@ -29,7 +31,6 @@
             [b setBackgroundImage:[UIImage imageNamed:@"white_image"] forState:UIControlStateNormal];
             Card * card = [self.game cardAtIndex:i];
             [b setTitle:card.contents forState:UIControlStateNormal];
-//            [b setTitle:@(i).stringValue forState:UIControlStateNormal];
             i++;
         }
         self.peeked = true;
@@ -43,9 +44,26 @@
     }
 }
 
+- (IBAction)sliderMoved:(id)sender {
+    if ([sender isOn]){
+        self.cardMatchLabel.text = [NSString stringWithFormat:@"3 Card Match"];
+        [self.game setThree_card:true];
+    }
+    else{
+        self.cardMatchLabel.text = [NSString stringWithFormat:@"2 Card Match"];
+        [self.game setThree_card:false];
+    }
+}
+
 - (IBAction)resetClick:(UIButton *)sender {
     NSLog(@"Reset Button clicked!");
     [self flipCardsOver];
+    [self.game resetGame];
+    [self updateUI];
+    self.games_playedLabel.text = [NSString stringWithFormat:@"Games Played: %d", self.game.games_played];
+    self.averageScoreLabel.text = [NSString stringWithFormat:@"Average: %f", self.game.average_score];
+    self.previousScoreLabel.text = [NSString stringWithFormat:@"Previous Match: N/A"];
+    self.peeked = false;
 }
 
 -(void) flipCardsOver{
@@ -74,7 +92,8 @@
 
 - (void) updateUI{
     self.totalScore.text = [NSString stringWithFormat:@"Total Score: %d",self.game.total_score];
-    self.previousScoreLabel.text = [NSString stringWithFormat:@"Previous Score: %d",self.game.previous_score];
+    self.previousScoreLabel.text = [NSString stringWithFormat:@"Previous Match: %d",self.game.previous_score];
+
     for (UIButton * button in self.buttonArray){
         NSUInteger index = [self.buttonArray indexOfObject:button];
         PlayingCard *card = [self.game cardAtIndex:index];
@@ -95,7 +114,6 @@
 - (IBAction)card_click:(id)sender {
     NSUInteger index = [self.buttonArray indexOfObject:sender];
 //    NSLog(@"Index from sender is: %lu",(unsigned long)index);
-    Card * a = [self.game cardAtIndex:index];
 //    NSLog(@"Card at button index %lu is: %@",index, a.contents);
     [self.game resolveClick:index];
     [self updateUI];

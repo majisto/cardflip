@@ -14,11 +14,13 @@
 
 @property (nonatomic, readonly) int total_score;
 @property (nonatomic, readonly) double_t average_score;
-@property (nonatomic, readonly) NSInteger games_played;
+@property (nonatomic, readonly) int games_played;
 @property (nonatomic, readonly) int previous_score;
 @property (nonatomic, readonly) BOOL three_card; //True means three_card.
 - (PlayingCard *)cardAtIndex:(NSUInteger) index;
 - (instancetype) init:(NSUInteger)count;
 - (void) printCards; //Prints all cards in game to NSLog.
 - (void) resolveClick:(NSUInteger) index;
+- (void) resetGame;
+- (void) setThree_card:(BOOL)three_card;
 @end

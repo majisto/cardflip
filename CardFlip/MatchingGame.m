@@ -13,11 +13,11 @@
 @interface MatchingGame ()
 @property (nonatomic, readwrite) int total_score;
 @property (nonatomic, readwrite) double_t average_score;
-@property (nonatomic, readwrite) NSInteger games_played;
+@property (nonatomic, readwrite) int games_played;
 @property (nonatomic, readwrite) int previous_score;
 @property (nonatomic, strong) NSMutableArray *cards;
-@property (nonatomic, readwrite) BOOL three_card;
 @property (strong, nonatomic) PlayingCardDeck *myDeck;
+@property (nonatomic, readwrite) BOOL three_card;
 @property (nonatomic, strong) NSMutableArray *chosen_cards;
 @end
 
@@ -33,6 +33,10 @@
 {
     if (!_chosen_cards) _chosen_cards = [[NSMutableArray alloc] init];
     return _chosen_cards;
+}
+
+- (void) setThree_card:(BOOL)three_card{
+    _three_card = three_card;
 }
 
 - (instancetype) init:(NSUInteger)count{
@@ -54,16 +58,30 @@
     return self;
 }
 
+- (void) resetGame{
+    self.games_played ++;
+    self.average_score = (self.average_score + self.total_score) / self.games_played;
+    self.previous_score = 0;
+    self.total_score = 0;
+    _myDeck = [[PlayingCardDeck alloc] init];
+    _cards = [[NSMutableArray alloc] init];
+    _chosen_cards = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 30; ++i){
+        PlayingCard * c = [self.myDeck drawRandCard];
+        [self.cards addObject:c];
+        }
+}
+
 - (void) resolveClick:(NSUInteger) index{
+    NSLog(@"Three card value: %d", self.three_card);
     PlayingCard *card = [self cardAtIndex:index];
     if ([self checkForSameCard:card]) return;
 //    NSLog(@"Resolve Click's Playing Card is: %@",card.contents);
     [self.chosen_cards addObject:card];
     card.chosen = true;
-//    NSLog(@"Size of chosen_cards array: %lu",(unsigned long)[self.chosen_cards count]);
-    if ([self.chosen_cards count] == 1)
-        self.total_score -= 1;
-    else if ([self.chosen_cards count] == 2){
+//    NSLog(@"Size of chosen_cards array: %lu",(unsigned long)
+    self.total_score -= 1;
+    if ([self.chosen_cards count] == 2){
         int new_score = [PlayingCard match:_chosen_cards];
         for (PlayingCard * c in _chosen_cards){
             c.matched = true;

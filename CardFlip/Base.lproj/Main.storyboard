@@ -23,16 +23,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="597" width="181" height="34"/>
+                                    <rect key="frame" x="11" y="597" width="181" height="34"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Match: N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-R8-asZ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="638" width="181" height="21"/>
+                                    <rect key="frame" x="11" y="635" width="181" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games Played: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMl-5R-Mxi">
@@ -41,7 +41,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="188" y="603" width="181" height="22"/>
+                                    <rect key="frame" x="194" y="603" width="181" height="22"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-aX-apu">
@@ -59,6 +59,20 @@
                                 </variation>
                                 <connections>
                                     <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lQ9-Ou-5vP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dF-A7-NTS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="pokedoge">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="87" y="20" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z6B-Be-ATE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-yt-T90">
@@ -469,16 +483,19 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6H3-cA-GGQ">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="301" y="544" width="51" height="31"/>
+                                    <rect key="frame" x="260" y="559" width="51" height="31"/>
                                 </variation>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="f8Z-d9-veK"/>
+                                </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-UR-l43">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average: N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-UR-l43">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="188" y="633" width="171" height="26"/>
+                                    <rect key="frame" x="194" y="630" width="181" height="26"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-eB-mUB">
@@ -493,20 +510,15 @@
                                     <action selector="resetClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G5V-y8-jcf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dF-A7-NTS">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="pokedoge">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Card Match" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym8-Wr-Ta4">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                    <rect key="frame" x="87" y="20" width="58" height="73"/>
+                                    <rect key="frame" x="238" y="530" width="108" height="21"/>
                                 </variation>
-                                <connections>
-                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z6B-Be-ATE"/>
-                                </connections>
-                            </button>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.10588236149999999" green="0.55686277149999996" blue="0.090196080509999998" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
@@ -515,6 +527,7 @@
                                 <exclude reference="1Sk-R8-asZ"/>
                                 <exclude reference="oMl-5R-Mxi"/>
                                 <exclude reference="1RT-aX-apu"/>
+                                <exclude reference="3dF-A7-NTS"/>
                                 <exclude reference="WXQ-yt-T90"/>
                                 <exclude reference="jDV-3f-zu6"/>
                                 <exclude reference="gWz-H3-To5"/>
@@ -547,7 +560,7 @@
                                 <exclude reference="6H3-cA-GGQ"/>
                                 <exclude reference="6V2-UR-l43"/>
                                 <exclude reference="as8-eB-mUB"/>
-                                <exclude reference="3dF-A7-NTS"/>
+                                <exclude reference="Ym8-Wr-Ta4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -556,6 +569,7 @@
                                 <include reference="1Sk-R8-asZ"/>
                                 <include reference="oMl-5R-Mxi"/>
                                 <include reference="1RT-aX-apu"/>
+                                <include reference="3dF-A7-NTS"/>
                                 <include reference="WXQ-yt-T90"/>
                                 <include reference="jDV-3f-zu6"/>
                                 <include reference="gWz-H3-To5"/>
@@ -588,13 +602,15 @@
                                 <include reference="6H3-cA-GGQ"/>
                                 <include reference="6V2-UR-l43"/>
                                 <include reference="as8-eB-mUB"/>
-                                <include reference="3dF-A7-NTS"/>
+                                <include reference="Ym8-Wr-Ta4"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="averageScoreLabel" destination="6V2-UR-l43" id="iZN-08-Owx"/>
+                        <outlet property="cardMatchLabel" destination="Ym8-Wr-Ta4" id="DnQ-c8-FOh"/>
+                        <outlet property="cardModeSlider" destination="6H3-cA-GGQ" id="eCK-DN-a2b"/>
                         <outlet property="games_playedLabel" destination="oMl-5R-Mxi" id="c3K-WJ-iWt"/>
                         <outlet property="previousScoreLabel" destination="1Sk-R8-asZ" id="X4B-td-8q9"/>
                         <outlet property="totalScore" destination="crC-CR-AHR" id="FCO-qm-LzY"/>
