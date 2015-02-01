@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A805318A1A718E90007B04FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A80531891A718E90007B04FD /* main.m */; };
+		A805318D1A718E90007B04FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A805318C1A718E90007B04FD /* AppDelegate.m */; };
+		A80531901A718E90007B04FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A805318F1A718E90007B04FD /* ViewController.m */; };
+		A80531931A718E90007B04FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80531911A718E90007B04FD /* Main.storyboard */; };
+		A80531951A718E90007B04FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80531941A718E90007B04FD /* Images.xcassets */; };
+		A80531981A718E90007B04FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80531961A718E90007B04FD /* LaunchScreen.xib */; };
+		A80531A41A718E90007B04FD /* CardFlipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A80531A31A718E90007B04FD /* CardFlipTests.m */; };
+		A80531AF1A719E1D007B04FD /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A80531AE1A719E1D007B04FD /* Card.m */; };
+		A80531B31A719FC6007B04FD /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A80531B21A719FC6007B04FD /* PlayingCard.m */; };
+		A88EBA631A7AD2EC00083A69 /* MatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A88EBA621A7AD2EC00083A69 /* MatchingGame.m */; };
+		A8F0422B1A73404B00924834 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F0422A1A73404B00924834 /* Deck.m */; };
+		A8F0422E1A73749E00924834 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F0422D1A73749E00924834 /* PlayingCardDeck.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A805319E1A718E90007B04FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A805317C1A718E8F007B04FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A80531831A718E8F007B04FD;
+			remoteInfo = CardFlip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A80531841A718E90007B04FD /* CardFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A80531881A718E90007B04FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A80531891A718E90007B04FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A805318B1A718E90007B04FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A805318C1A718E90007B04FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A805318E1A718E90007B04FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A805318F1A718E90007B04FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A80531921A718E90007B04FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A80531941A718E90007B04FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A80531971A718E90007B04FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A805319D1A718E90007B04FD /* CardFlipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardFlipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A80531A21A718E90007B04FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A80531A31A718E90007B04FD /* CardFlipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardFlipTests.m; sourceTree = "<group>"; };
+		A80531AD1A719E1D007B04FD /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		A80531AE1A719E1D007B04FD /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		A80531B11A719FC6007B04FD /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		A80531B21A719FC6007B04FD /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		A88EBA611A7AD2EC00083A69 /* MatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchingGame.h; sourceTree = "<group>"; };
+		A88EBA621A7AD2EC00083A69 /* MatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchingGame.m; sourceTree = "<group>"; };
+		A8F042291A73404B00924834 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		A8F0422A1A73404B00924834 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		A8F0422C1A73749E00924834 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		A8F0422D1A73749E00924834 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A80531811A718E8F007B04FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A805319A1A718E90007B04FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A805317B1A718E8F007B04FD = {
+			isa = PBXGroup;
+			children = (
+				A80531861A718E90007B04FD /* CardFlip */,
+				A80531A01A718E90007B04FD /* CardFlipTests */,
+				A80531851A718E90007B04FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A80531851A718E90007B04FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A80531841A718E90007B04FD /* CardFlip.app */,
+				A805319D1A718E90007B04FD /* CardFlipTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A80531861A718E90007B04FD /* CardFlip */ = {
+			isa = PBXGroup;
+			children = (
+				A80531B01A719E34007B04FD /* Model */,
+				A805318B1A718E90007B04FD /* AppDelegate.h */,
+				A805318C1A718E90007B04FD /* AppDelegate.m */,
+				A805318E1A718E90007B04FD /* ViewController.h */,
+				A805318F1A718E90007B04FD /* ViewController.m */,
+				A80531911A718E90007B04FD /* Main.storyboard */,
+				A80531941A718E90007B04FD /* Images.xcassets */,
+				A80531961A718E90007B04FD /* LaunchScreen.xib */,
+				A80531871A718E90007B04FD /* Supporting Files */,
+			);
+			path = CardFlip;
+			sourceTree = "<group>";
+		};
+		A80531871A718E90007B04FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A80531881A718E90007B04FD /* Info.plist */,
+				A80531891A718E90007B04FD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A80531A01A718E90007B04FD /* CardFlipTests */ = {
+			isa = PBXGroup;
+			children = (
+				A80531A31A718E90007B04FD /* CardFlipTests.m */,
+				A80531A11A718E90007B04FD /* Supporting Files */,
+			);
+			path = CardFlipTests;
+			sourceTree = "<group>";
+		};
+		A80531A11A718E90007B04FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A80531A21A718E90007B04FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A80531B01A719E34007B04FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A80531B11A719FC6007B04FD /* PlayingCard.h */,
+				A80531B21A719FC6007B04FD /* PlayingCard.m */,
+				A80531AD1A719E1D007B04FD /* Card.h */,
+				A80531AE1A719E1D007B04FD /* Card.m */,
+				A8F042291A73404B00924834 /* Deck.h */,
+				A8F0422A1A73404B00924834 /* Deck.m */,
+				A8F0422C1A73749E00924834 /* PlayingCardDeck.h */,
+				A8F0422D1A73749E00924834 /* PlayingCardDeck.m */,
+				A88EBA611A7AD2EC00083A69 /* MatchingGame.h */,
+				A88EBA621A7AD2EC00083A69 /* MatchingGame.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A80531831A718E8F007B04FD /* CardFlip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80531A71A718E90007B04FD /* Build configuration list for PBXNativeTarget "CardFlip" */;
+			buildPhases = (
+				A80531801A718E8F007B04FD /* Sources */,
+				A80531811A718E8F007B04FD /* Frameworks */,
+				A80531821A718E8F007B04FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardFlip;
+			productName = CardFlip;
+			productReference = A80531841A718E90007B04FD /* CardFlip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A805319C1A718E90007B04FD /* CardFlipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80531AA1A718E90007B04FD /* Build configuration list for PBXNativeTarget "CardFlipTests" */;
+			buildPhases = (
+				A80531991A718E90007B04FD /* Sources */,
+				A805319A1A718E90007B04FD /* Frameworks */,
+				A805319B1A718E90007B04FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A805319F1A718E90007B04FD /* PBXTargetDependency */,
+			);
+			name = CardFlipTests;
+			productName = CardFlipTests;
+			productReference = A805319D1A718E90007B04FD /* CardFlipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A805317C1A718E8F007B04FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Daniel Durbin";
+				TargetAttributes = {
+					A80531831A718E8F007B04FD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					A805319C1A718E90007B04FD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = A80531831A718E8F007B04FD;
+					};
+				};
+			};
+			buildConfigurationList = A805317F1A718E8F007B04FD /* Build configuration list for PBXProject "CardFlip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A805317B1A718E8F007B04FD;
+			productRefGroup = A80531851A718E90007B04FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A80531831A718E8F007B04FD /* CardFlip */,
+				A805319C1A718E90007B04FD /* CardFlipTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A80531821A718E8F007B04FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A80531931A718E90007B04FD /* Main.storyboard in Resources */,
+				A80531981A718E90007B04FD /* LaunchScreen.xib in Resources */,
+				A80531951A718E90007B04FD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A805319B1A718E90007B04FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A80531801A718E8F007B04FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A80531901A718E90007B04FD /* ViewController.m in Sources */,
+				A805318D1A718E90007B04FD /* AppDelegate.m in Sources */,
+				A805318A1A718E90007B04FD /* main.m in Sources */,
+				A80531B31A719FC6007B04FD /* PlayingCard.m in Sources */,
+				A8F0422E1A73749E00924834 /* PlayingCardDeck.m in Sources */,
+				A8F0422B1A73404B00924834 /* Deck.m in Sources */,
+				A88EBA631A7AD2EC00083A69 /* MatchingGame.m in Sources */,
+				A80531AF1A719E1D007B04FD /* Card.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A80531991A718E90007B04FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A80531A41A718E90007B04FD /* CardFlipTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A805319F1A718E90007B04FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A80531831A718E8F007B04FD /* CardFlip */;
+			targetProxy = A805319E1A718E90007B04FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A80531911A718E90007B04FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A80531921A718E90007B04FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A80531961A718E90007B04FD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A80531971A718E90007B04FD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A80531A51A718E90007B04FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A80531A61A718E90007B04FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A80531A81A718E90007B04FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = CardFlip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A80531A91A718E90007B04FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = CardFlip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A80531AB1A718E90007B04FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CardFlipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardFlip.app/CardFlip";
+			};
+			name = Debug;
+		};
+		A80531AC1A718E90007B04FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CardFlipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardFlip.app/CardFlip";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A805317F1A718E8F007B04FD /* Build configuration list for PBXProject "CardFlip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80531A51A718E90007B04FD /* Debug */,
+				A80531A61A718E90007B04FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80531A71A718E90007B04FD /* Build configuration list for PBXNativeTarget "CardFlip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80531A81A718E90007B04FD /* Debug */,
+				A80531A91A718E90007B04FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80531AA1A718E90007B04FD /* Build configuration list for PBXNativeTarget "CardFlipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80531AB1A718E90007B04FD /* Debug */,
+				A80531AC1A718E90007B04FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A805317C1A718E8F007B04FD /* Project object */;
+}

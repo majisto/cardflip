@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8B8E994D-2F6B-4BAB-8B67-F5B522F80A0A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CardFlip</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DCF8D35AB25216B300C28AC12643BE5B3EBE5CF0</key>
+		<string>https://github.com/majisto/cardFlip.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CardFlip.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DCF8D35AB25216B300C28AC12643BE5B3EBE5CF0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/majisto/cardFlip.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DCF8D35AB25216B300C28AC12643BE5B3EBE5CF0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DCF8D35AB25216B300C28AC12643BE5B3EBE5CF0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CardFlip</string>
+		</dict>
+	</array>
+</dict>
+</plist>
