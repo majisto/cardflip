@@ -16,13 +16,7 @@
 
 - (int) match:(NSArray *) cards
 {
-    int score = 0;
-    
-    for (Card* c in cards){
-        if ([c.contents isEqualToString:self.contents])
-            score = 1;
-    }
-    return score;
+    return [self.contents isEqualToString:[cards firstObject]] ? 1:0;
 }
 
 @end

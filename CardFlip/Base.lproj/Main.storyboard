@@ -505,7 +505,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.10588236153125763" green="0.55686277151107788" blue="0.090196080505847931" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.10588236149999999" green="0.55686277149999996" blue="0.090196080509999998" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="crC-CR-AHR"/>
@@ -591,9 +591,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="flipsLabel" destination="crC-CR-AHR" id="mJP-ez-S50"/>
+                        <outlet property="averageScoreLabel" destination="6V2-UR-l43" id="iZN-08-Owx"/>
                         <outlet property="games_playedLabel" destination="oMl-5R-Mxi" id="c3K-WJ-iWt"/>
-                        <outlet property="shuffleLabel" destination="1Sk-R8-asZ" id="chP-BB-WDn"/>
+                        <outlet property="previousScoreLabel" destination="1Sk-R8-asZ" id="X4B-td-8q9"/>
+                        <outlet property="totalScore" destination="crC-CR-AHR" id="FCO-qm-LzY"/>
                         <outletCollection property="buttonArray" destination="8HZ-g0-MbQ" id="8r8-MN-DZ0"/>
                         <outletCollection property="buttonArray" destination="jDV-3f-zu6" id="KPC-Sz-2v2"/>
                         <outletCollection property="buttonArray" destination="WXQ-yt-T90" id="q8N-ua-URe"/>

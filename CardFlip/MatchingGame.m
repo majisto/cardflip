@@ -11,13 +11,14 @@
 #import "PlayingCardDeck.h"
 
 @interface MatchingGame ()
-@property (nonatomic, readwrite) NSInteger total_score;
+@property (nonatomic, readwrite) int total_score;
 @property (nonatomic, readwrite) double_t average_score;
 @property (nonatomic, readwrite) NSInteger games_played;
 @property (nonatomic, readwrite) NSInteger previous_score;
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (nonatomic, readwrite) BOOL three_card;
 @property (strong, nonatomic) PlayingCardDeck *myDeck;
+@property (nonatomic, strong) NSMutableArray *chosen_cards;
 @end
 
 @implementation MatchingGame
@@ -26,6 +27,12 @@
 {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
     return _cards;
+}
+
+- (NSMutableArray *) chosen_cards
+{
+    if (!_chosen_cards) _chosen_cards = [[NSMutableArray alloc] init];
+    return _chosen_cards;
 }
 
 - (instancetype) init:(NSUInteger)count{
@@ -47,7 +54,15 @@
     return self;
 }
 
-- (Card *)cardAtIndex:(NSUInteger) index{
+- (void) resolveClick:(NSUInteger) index{
+    self.total_score -= 1;
+    PlayingCard *card = [self cardAtIndex:index];
+//    NSLog(@"Resolve Click's Playing Card is: %@",card.contents);
+    [self.chosen_cards addObject:card];
+//    NSLog(@"Size of chosen_cards array: %lu",(unsigned long)[self.chosen_cards count]);
+}
+
+- (PlayingCard *)cardAtIndex:(NSUInteger) index{
     return [self.cards objectAtIndex:index];
 }
 

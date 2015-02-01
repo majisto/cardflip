@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CardFlip/Card.m"
-            timestampString = "444377912.676913"
+            filePath = "CardFlip/ViewController.m"
+            timestampString = "444450362.615567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "-match:"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-card_click:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
