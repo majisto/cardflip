@@ -11,15 +11,30 @@
 
 @implementation PlayingCard
 
-- (int) match:(NSArray *) cards
++ (int) match:(NSArray *) cards
 {
     int score = 0;
-    if ([cards count] == 1){
-        PlayingCard *card = [cards firstObject];
+    if ([cards count] == 2){
+        PlayingCard *c1= [cards firstObject];
+        PlayingCard *c2= [cards objectAtIndex:1];
+        int c1Color = [PlayingCard getColorofSuit:c1];
+        int c2color = [PlayingCard getColorofSuit:c2];
+        if (c1.rank == c2.rank){
+            if (c1Color == c2color) score += 16;
+            else score += 8;
+        }
+        else if ([c1.suit isEqualToString:c2.suit]) score += 2;
+        else if (c1Color == c2color) score += 1;
+    }
+    else if ([cards count] == 3){
         
     }
     
     return score;
+}
+
++ (int) getColorofSuit:(PlayingCard*) card{ //True is red
+    return [card.suit isEqualToString:@"♥"] || [card.suit isEqualToString:@"♦"] ? 1 : 0;
 }
 
 + (NSArray *) validRanks
