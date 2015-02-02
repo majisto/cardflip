@@ -23,4 +23,5 @@
 - (void) resolveClick:(NSUInteger) index;
 - (void) resetGame;
 - (void) setThree_card:(BOOL)three_card;
+- (void) peek;
 @end

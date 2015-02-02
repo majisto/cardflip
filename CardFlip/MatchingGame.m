@@ -23,6 +23,10 @@
 
 @implementation MatchingGame
 
+- (void) peek{
+    self.total_score -= 15;
+}
+
 - (NSMutableArray *) cards
 {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
@@ -76,12 +80,21 @@
     NSLog(@"Three card value: %d", self.three_card);
     PlayingCard *card = [self cardAtIndex:index];
     if ([self checkForSameCard:card]) return;
-//    NSLog(@"Resolve Click's Playing Card is: %@",card.contents);
     [self.chosen_cards addObject:card];
     card.chosen = true;
-//    NSLog(@"Size of chosen_cards array: %lu",(unsigned long)
     self.total_score -= 1;
-    if ([self.chosen_cards count] == 2){
+    
+    if ([self.chosen_cards count] == 2 && !self.three_card){
+        int new_score = [PlayingCard match:_chosen_cards];
+        for (PlayingCard * c in _chosen_cards){
+            c.matched = true;
+        }
+        [self.chosen_cards removeAllObjects];
+        self.previous_score = new_score;
+        self.total_score += new_score;
+    }
+    
+    else if ([self.chosen_cards count] == 3){ //Three cards to match
         int new_score = [PlayingCard match:_chosen_cards];
         for (PlayingCard * c in _chosen_cards){
             c.matched = true;
@@ -94,9 +107,8 @@
 
 - (BOOL) checkForSameCard:(PlayingCard *) card{
     if ([self.chosen_cards containsObject:card]) {
-        //Card already chosen, flip back over and add lost point back.
+        //Card already chosen, flip back over.
         card.chosen = false;
-        self.total_score += 1;
         self.previous_score = 0;
         [self.chosen_cards removeObject:card];
         return true;

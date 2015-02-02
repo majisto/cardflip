@@ -26,6 +26,7 @@
 
 - (IBAction)peekClick:(UIButton *)sender {
     if (!self.peeked){
+        [self.game peek];
         int i = 0;
         for (UIButton* b in self.buttonArray){
             [b setBackgroundImage:[UIImage imageNamed:@"white_image"] forState:UIControlStateNormal];
@@ -36,11 +37,9 @@
         self.peeked = true;
     }
     else{
-        for (UIButton* b in self.buttonArray){
-            [b setBackgroundImage:[UIImage imageNamed:@"pokedoge"] forState:UIControlStateNormal];
-            [b setTitle:@"" forState:UIControlStateNormal];
-        }
+        [self flipCardsOver];
         self.peeked = false;
+        [self updateUI];
     }
 }
 
@@ -56,7 +55,6 @@
 }
 
 - (IBAction)resetClick:(UIButton *)sender {
-    NSLog(@"Reset Button clicked!");
     [self flipCardsOver];
     [self.game resetGame];
     [self updateUI];
@@ -112,9 +110,8 @@
 }
 
 - (IBAction)card_click:(id)sender {
+    if (self.peeked) return;
     NSUInteger index = [self.buttonArray indexOfObject:sender];
-//    NSLog(@"Index from sender is: %lu",(unsigned long)index);
-//    NSLog(@"Card at button index %lu is: %@",index, a.contents);
     [self.game resolveClick:index];
     [self updateUI];
 }

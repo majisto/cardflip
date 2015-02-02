@@ -17,19 +17,28 @@
     if ([cards count] == 2){
         PlayingCard *c1= [cards firstObject];
         PlayingCard *c2= [cards objectAtIndex:1];
-        int c1Color = [PlayingCard getColorofSuit:c1];
-        int c2color = [PlayingCard getColorofSuit:c2];
-        if (c1.rank == c2.rank){
-            if (c1Color == c2color) score += 16;
-            else score += 8;
-        }
-        else if ([c1.suit isEqualToString:c2.suit]) score += 2;
-        else if (c1Color == c2color) score += 1;
+        score = [PlayingCard match:c1 card2:c2 score:score];
     }
     else if ([cards count] == 3){
-        
+        PlayingCard *c1= [cards firstObject];
+        PlayingCard *c2= [cards objectAtIndex:1];
+        PlayingCard *c3= [cards objectAtIndex:2];
+        score += [PlayingCard match:c1 card2:c2 score:0];
+        score += [PlayingCard match:c1 card2:c3 score:0];
+        score += [PlayingCard match:c2 card2:c3 score:0];
     }
-    
+    return score;
+}
+
++ (int) match:(PlayingCard *)c1 card2:(PlayingCard *)c2 score:(int)score{
+    int c1Color = [PlayingCard getColorofSuit:c1];
+    int c2color = [PlayingCard getColorofSuit:c2];
+    if (c1.rank == c2.rank){
+        if (c1Color == c2color) score += 16;
+        else score += 8;
+    }
+    else if ([c1.suit isEqualToString:c2.suit]) score += 2;
+    else if (c1Color == c2color) score += 1;
     return score;
 }
 
