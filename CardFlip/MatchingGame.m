@@ -19,12 +19,24 @@
 @property (strong, nonatomic) PlayingCardDeck *myDeck;
 @property (nonatomic, readwrite) BOOL three_card;
 @property (nonatomic, strong) NSMutableArray *chosen_cards;
+@property (nonatomic, strong) NSMutableArray *game_scores;
+@property (nonatomic, readwrite) BOOL peeked;
 @end
 
 @implementation MatchingGame
 
 - (void) peek{
-    self.total_score -= 15;
+    self.peeked = !self.peeked;
+    if (self.peeked){
+        self.total_score -= 15;
+        for (PlayingCard *card in self.cards){
+            if (!card.matched) card.chosen = true;
+        }
+    }
+    else{
+        for (PlayingCard *card in self.cards)
+            if (!card.matched && ![self.chosen_cards containsObject:card]) card.chosen = false;
+    }
 }
 
 - (NSMutableArray *) cards
@@ -39,8 +51,25 @@
     return _chosen_cards;
 }
 
+- (NSMutableArray *) game_scores
+{
+    if (!_game_scores) _game_scores = [[NSMutableArray alloc] init];
+    return _game_scores;
+}
+
 - (void) setThree_card:(BOOL)three_card{
     _three_card = three_card;
+}
+
+- (void) setPeeked:(BOOL)peeked{
+    _peeked = peeked;
+}
+
+- (void) changeMode{
+    for (PlayingCard *card in self.chosen_cards){
+        card.chosen = false;
+    }
+    [self.chosen_cards removeAllObjects];
 }
 
 - (instancetype) init:(NSUInteger)count{
@@ -58,13 +87,16 @@
             }
         }
     }
-
+    _peeked = false;
     return self;
 }
 
+/* Resetting involves making a new deck, and a new set of 30 cards in the card array.  We
+ also calculate the new average score. */
 - (void) resetGame{
-    self.games_played ++;
-    self.average_score = (self.average_score + self.total_score) / self.games_played;
+    self.peeked = false;
+    self.games_played ++;    double_t gp = self.games_played;
+    self.average_score = (((gp - 1) / gp) * self.average_score) + ((1/gp) * self.total_score);
     self.previous_score = 0;
     self.total_score = 0;
     _myDeck = [[PlayingCardDeck alloc] init];
@@ -76,8 +108,10 @@
         }
 }
 
+/* Main logic in Game.  This receives an index of the button clicked, which corresponds to the
+ index in the card array.  We will add the card to chosen_cards, check if it already exists,
+ deduct points and then call match if we have 2 or 3 cards. Scores are also updated. */
 - (void) resolveClick:(NSUInteger) index{
-    NSLog(@"Three card value: %d", self.three_card);
     PlayingCard *card = [self cardAtIndex:index];
     if ([self checkForSameCard:card]) return;
     [self.chosen_cards addObject:card];
@@ -105,11 +139,11 @@
     }
 }
 
+/* Checks to see if card is chosen card is already in chosen_cards array.
+ If it is, we need to take it out and penalize player. */
 - (BOOL) checkForSameCard:(PlayingCard *) card{
     if ([self.chosen_cards containsObject:card]) {
-        //Card already chosen, flip back over.
         card.chosen = false;
-        self.previous_score = 0;
         [self.chosen_cards removeObject:card];
         return true;
     }
@@ -120,6 +154,7 @@
     return [self.cards objectAtIndex:index];
 }
 
+/* Prints all cards in local cards array */
 - (void)printCards{
     int i = 0;
     for (PlayingCard *card in _cards){

@@ -17,6 +17,7 @@
 @property (nonatomic, readonly) int games_played;
 @property (nonatomic, readonly) int previous_score;
 @property (nonatomic, readonly) BOOL three_card; //True means three_card.
+@property (nonatomic, readonly) BOOL peeked;
 - (PlayingCard *)cardAtIndex:(NSUInteger) index;
 - (instancetype) init:(NSUInteger)count;
 - (void) printCards; //Prints all cards in game to NSLog.
@@ -24,4 +25,5 @@
 - (void) resetGame;
 - (void) setThree_card:(BOOL)three_card;
 - (void) peek;
+- (void) changeMode;
 @end

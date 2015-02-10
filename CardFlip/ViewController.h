@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Daniel Durbin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController_Abstract.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : ViewController_Abstract
 @property (nonatomic) BOOL face_up_down;
 @property (nonatomic) BOOL peeked;
 
