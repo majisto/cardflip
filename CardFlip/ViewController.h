@@ -9,8 +9,6 @@
 #import "ViewController_Abstract.h"
 
 @interface ViewController : ViewController_Abstract
-@property (nonatomic) BOOL face_up_down;
-@property (nonatomic) BOOL peeked;
 
 @end
 

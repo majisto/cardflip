@@ -12,42 +12,30 @@
 
 @interface ViewController_Abstract ()
 @property (weak, nonatomic) IBOutlet UILabel *totalScore;
-//@property (weak, nonatomic) IBOutlet UILabel *previousScoreLabel;
-//@property (weak, nonatomic) IBOutlet UILabel *games_playedLabel; //cardsDeckLabel
-//@property (weak, nonatomic) IBOutlet UILabel *averageScoreLabel;
-@property (weak, nonatomic) IBOutlet UISwitch *cardModeSlider;
-@property (weak, nonatomic) IBOutlet UILabel *cardMatchLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonArray;
 @property (strong, nonatomic) MatchingGame *game;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segControl;
 @end
 
 @implementation ViewController_Abstract
 
 - (IBAction)peekClick:(UIButton *)sender {
     [self.game peek];
-    self.cardModeSlider.userInteractionEnabled = !self.game.peeked;
     [self updateUI];
 }
 
-- (IBAction)sliderMoved:(id)sender {
-    if ([sender isOn]){
-        self.cardMatchLabel.text = [NSString stringWithFormat:@"3 Card Match"];
-        [self.game setThree_card:true];
-    }
-    else{
-        self.cardMatchLabel.text = [NSString stringWithFormat:@"2 Card Match"];
+- (IBAction)changeModeSegmented:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0){
         [self.game setThree_card:false];
     }
-    [self.game changeMode];
-    [self updateUI];
+    else if (sender.selectedSegmentIndex == 1){
+        [self.game setThree_card:true];
+    }
 }
 
 - (IBAction)resetClick:(UIButton *)sender {
     [self.game resetGame];
     [self updateUI];
-//    self.games_playedLabel.text = [NSString stringWithFormat:@"Games Played: %d", self.game.games_played];
-//    self.averageScoreLabel.text = [NSString stringWithFormat:@"Average: %f", self.game.average_score];
-//    self.previousScoreLabel.text = [NSString stringWithFormat:@"Previous Match: N/A"];
 }
 
 -(MatchingGame *) game{
