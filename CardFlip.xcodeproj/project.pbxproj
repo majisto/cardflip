@@ -20,6 +20,8 @@
 		A8C0311E1A8AA6C70046A8DA /* RSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C0311D1A8AA6C70046A8DA /* RSCard.m */; };
 		A8C031221A8AF44F0046A8DA /* ReducedPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C031211A8AF44F0046A8DA /* ReducedPlayingCard.m */; };
 		A8C031251A8AF4A60046A8DA /* ReducedPlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C031241A8AF4A60046A8DA /* ReducedPlayingCardDeck.m */; };
+		A8C031281A8B28B40046A8DA /* ExpandedPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C031271A8B28B40046A8DA /* ExpandedPlayingCard.m */; };
+		A8C0312B1A8B28D10046A8DA /* ExpandedPlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C0312A1A8B28D10046A8DA /* ExpandedPlayingCardDeck.m */; };
 		A8DE37FF1A895FAA005EA3A1 /* ViewController_Reduced.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE37FE1A895FAA005EA3A1 /* ViewController_Reduced.m */; };
 		A8DE38021A89656A005EA3A1 /* ViewController_Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE38011A89656A005EA3A1 /* ViewController_Expanded.m */; };
 		A8DE38051A896681005EA3A1 /* ViewController_Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE38041A896681005EA3A1 /* ViewController_Abstract.m */; };
@@ -63,6 +65,10 @@
 		A8C031211A8AF44F0046A8DA /* ReducedPlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReducedPlayingCard.m; sourceTree = "<group>"; };
 		A8C031231A8AF4A60046A8DA /* ReducedPlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReducedPlayingCardDeck.h; sourceTree = "<group>"; };
 		A8C031241A8AF4A60046A8DA /* ReducedPlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReducedPlayingCardDeck.m; sourceTree = "<group>"; };
+		A8C031261A8B28B40046A8DA /* ExpandedPlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedPlayingCard.h; sourceTree = "<group>"; };
+		A8C031271A8B28B40046A8DA /* ExpandedPlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedPlayingCard.m; sourceTree = "<group>"; };
+		A8C031291A8B28D10046A8DA /* ExpandedPlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedPlayingCardDeck.h; sourceTree = "<group>"; };
+		A8C0312A1A8B28D10046A8DA /* ExpandedPlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedPlayingCardDeck.m; sourceTree = "<group>"; };
 		A8DE37FD1A895FAA005EA3A1 /* ViewController_Reduced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_Reduced.h; sourceTree = "<group>"; };
 		A8DE37FE1A895FAA005EA3A1 /* ViewController_Reduced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_Reduced.m; sourceTree = "<group>"; };
 		A8DE38001A89656A005EA3A1 /* ViewController_Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_Expanded.h; sourceTree = "<group>"; };
@@ -171,6 +177,10 @@
 				A8C031211A8AF44F0046A8DA /* ReducedPlayingCard.m */,
 				A8C031231A8AF4A60046A8DA /* ReducedPlayingCardDeck.h */,
 				A8C031241A8AF4A60046A8DA /* ReducedPlayingCardDeck.m */,
+				A8C031261A8B28B40046A8DA /* ExpandedPlayingCard.h */,
+				A8C031271A8B28B40046A8DA /* ExpandedPlayingCard.m */,
+				A8C031291A8B28D10046A8DA /* ExpandedPlayingCardDeck.h */,
+				A8C0312A1A8B28D10046A8DA /* ExpandedPlayingCardDeck.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -292,9 +302,11 @@
 			files = (
 				A80531901A718E90007B04FD /* ViewController.m in Sources */,
 				A8DE37FF1A895FAA005EA3A1 /* ViewController_Reduced.m in Sources */,
+				A8C0312B1A8B28D10046A8DA /* ExpandedPlayingCardDeck.m in Sources */,
 				A805318D1A718E90007B04FD /* AppDelegate.m in Sources */,
 				A805318A1A718E90007B04FD /* main.m in Sources */,
 				A80531B31A719FC6007B04FD /* PlayingCard.m in Sources */,
+				A8C031281A8B28B40046A8DA /* ExpandedPlayingCard.m in Sources */,
 				A8F0422E1A73749E00924834 /* PlayingCardDeck.m in Sources */,
 				A8F0422B1A73404B00924834 /* Deck.m in Sources */,
 				A8DE38021A89656A005EA3A1 /* ViewController_Expanded.m in Sources */,

@@ -9,7 +9,7 @@
 #import "ViewController_Reduced.h"
 
 @interface ViewController_Reduced ()
-
+@property (strong, nonatomic) MatchingGame *game;
 @end
 
 @implementation ViewController_Reduced
@@ -26,6 +26,11 @@
 
 - (UIImage *) cardImage:(PlayingCard *) card{
     return [UIImage imageNamed:card.ischosen ? @"white_image" : @"squirtle"];
+}
+
+-(MatchingGame *) game{
+    if (!_game) {_game = [[MatchingGame alloc] initWithArray:@[@"30",@"0"]];}
+    return _game;
 }
 
 @end

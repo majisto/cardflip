@@ -9,5 +9,9 @@
 #import "RSCard.h"
 
 @interface ReducedPlayingCard : RSCard
+@property (nonatomic) NSUInteger rank;
+@property(strong, nonatomic) NSString* suit;
+
++ (NSArray *) validSuits;
 
 @end

@@ -21,7 +21,7 @@
     return _cards;
 }
 
--(void) addCard:(Card*) card atTop:(bool) atTop;
+-(void) addCard:(Card*) card atTop:(bool) atTop
 {
     if (atTop){
         [self.cards insertObject:card atIndex:0];

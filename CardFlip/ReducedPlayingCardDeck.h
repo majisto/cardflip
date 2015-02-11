@@ -10,5 +10,8 @@
 #import "ReducedPlayingCard.h"
 
 @interface ReducedPlayingCardDeck : Deck
+
 -(ReducedPlayingCard *) drawRandCard;
+
+
 @end

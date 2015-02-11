@@ -27,28 +27,5 @@
     return [[self validRanks] count] - 1;
 }
 
-- (void)setRank:(NSUInteger)rank
-{
-    if (rank <= [RSCard max_rank])
-        _rank = rank;
-}
-
-@synthesize suit = _suit;
-
-+ (NSArray *) validSuits
-{
-    return nil;
-}
-
-- (void)setSuit:(NSString *)suit
-{
-    if ([[RSCard validSuits] containsObject:suit])
-        _suit=suit;
-}
-
-- (NSString *)suit
-{
-    return _suit ? _suit : @"?";
-}
 
 @end

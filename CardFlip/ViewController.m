@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) MatchingGame *game;
 
 @end
 
@@ -29,6 +29,10 @@
     return [UIImage imageNamed:card.ischosen ? @"white_image" : @"charie"];
 }
 
+-(MatchingGame *) game{
+    if (!_game) {_game = [[MatchingGame alloc] initWithArray:@[@"30",@"1"]];}
+    return _game;
+}
 
 @end
 

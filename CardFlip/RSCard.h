@@ -10,13 +10,9 @@
 
 @interface RSCard : Card
 
-@property (nonatomic) NSUInteger rank;
-@property (strong, nonatomic) NSString* suit;
-- (NSArray *) validSuits;
-- (NSDictionary *) suitColors;
-
+- (NSArray *) validSuits; //Required
+- (NSDictionary *) suitColors; //Required
 + (NSArray *) validRanks;
 + (NSUInteger) max_rank;
-+ (NSArray *) validSuits;
 
 @end

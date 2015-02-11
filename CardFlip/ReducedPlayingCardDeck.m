@@ -14,14 +14,20 @@
 
 @implementation ReducedPlayingCardDeck
 
+-(NSMutableArray *) cards
+{
+    if (!_cards) _cards = [[NSMutableArray alloc] init];
+    return _cards;
+}
+
 - (instancetype) init{
     self = [super init];
     
     if (self)
     {
-        NSLog(@"Valid suits in ReducedPlayingCard: %@", [ReducedPlayingCard validSuits]);
         for (NSString *suit in [ReducedPlayingCard validSuits]){
-            NSLog(@"Suit is: %@",suit);
+//            NSLog(@"Suit is: %@",suit);
+//            NSLog(@"Max_Rank is: %lu",(unsigned long)[ReducedPlayingCard max_rank]);
             for (NSInteger rank = 1; rank <= [ReducedPlayingCard max_rank]; rank++){
                 ReducedPlayingCard *card = [[ReducedPlayingCard alloc] init];
                 ReducedPlayingCard *card2 = [[ReducedPlayingCard alloc] init];

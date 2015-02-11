@@ -39,7 +39,7 @@
 }
 
 -(MatchingGame *) game{
-    if (!_game) {_game = [[MatchingGame alloc] init:30];}
+    if (!_game) {_game = [[MatchingGame alloc] initWithArray:@[@"30",@"1"]];}
     return _game;
 }
 

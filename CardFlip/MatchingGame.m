@@ -17,12 +17,17 @@
 @property (nonatomic, readwrite) double_t average_score;
 @property (nonatomic, readwrite) int games_played;
 @property (nonatomic, readwrite) int previous_score;
+
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (strong, nonatomic) PlayingCardDeck *myDeck;
 @property (strong, nonatomic) ReducedPlayingCardDeck *myRedDeck;
+
 @property (nonatomic, readwrite) BOOL three_card;
+
 @property (nonatomic, strong) NSMutableArray *chosen_cards;
 @property (nonatomic, strong) NSMutableArray *game_scores;
+@property (nonatomic) int type_of_game; //0 = reduced, 1 = regular, 2 = expanded.
+
 @property (nonatomic, readwrite) BOOL peeked;
 @end
 
@@ -75,34 +80,64 @@
     [self.chosen_cards removeAllObjects];
 }
 
-- (instancetype) init:(NSUInteger)count{
+- (instancetype) initWithArray:(NSArray *)count{
     self = [super init];
     
     if (self){
-        _myDeck = [[PlayingCardDeck alloc] init];
-        for (int i = 0; i < count; ++i){
-            PlayingCard * c = [self.myDeck drawRandCard];
-            if (c)
-                [self.cards addObject:c];
-            else{
-                self = nil;
-                break;
+        int cardnum = [count[0] intValue];
+        self.type_of_game = [count[1] intValue];
+        if (self.type_of_game == 0){
+            _myRedDeck = [[ReducedPlayingCardDeck alloc] init];
+            for (int i = 0; i < cardnum; ++i){
+                ReducedPlayingCard * c = [self.myRedDeck drawRandCard];
+                if (c)
+                    [self.cards addObject:c];
+                else{
+                    self = nil;
+                    break;
+                }
             }
         }
-        _myRedDeck = [[ReducedPlayingCardDeck alloc] init];
-        for (int i = 0; i < count; ++i){
-            ReducedPlayingCard * c = [self.myRedDeck drawRandCard];
-            NSLog(@"Reduced Playing card is: %@", c.description);
-            if (c)
-                [self.cards addObject:c];
-            else{
-                self = nil;
-                break;
+        else if (self.type_of_game == 1){
+            _myDeck = [[PlayingCardDeck alloc] init];
+            for (int i = 0; i < cardnum; ++i){
+                PlayingCard * c = [self.myDeck drawRandCard];
+                if (c)
+                    [self.cards addObject:c];
+                else{
+                    self = nil;
+                    break;
+                }
             }
+        }
+        else{
+            //Expanded
         }
     }
     _peeked = false;
     return self;
+}
+
+- (void) resetDeck{
+    _cards = [[NSMutableArray alloc] init];
+    _chosen_cards = [[NSMutableArray alloc] init];
+    switch (self.type_of_game) {
+        case 0:
+            _myRedDeck = [[ReducedPlayingCardDeck alloc]init];
+            for (int i = 0; i < 30; ++i){
+                ReducedPlayingCard * c = [self.myRedDeck drawRandCard];
+                [self.cards addObject:c];
+            }
+            break;
+        case 1:
+            _myDeck = [[PlayingCardDeck alloc] init];
+            for (int i = 0; i < 30; ++i){
+                PlayingCard * c = [self.myDeck drawRandCard];
+                [self.cards addObject:c];
+            }
+        default:
+            break;
+    }
 }
 
 /* Resetting involves making a new deck, and a new set of 30 cards in the card array.  We
@@ -114,13 +149,15 @@
     self.average_score = (((gp - 1) / gp) * self.average_score) + ((1/gp) * self.total_score);
     self.previous_score = 0;
     self.total_score = 0;
-    _myDeck = [[PlayingCardDeck alloc] init];
-    _cards = [[NSMutableArray alloc] init];
-    _chosen_cards = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 30; ++i){
-        PlayingCard * c = [self.myDeck drawRandCard];
-        [self.cards addObject:c];
-        }
+    [self resetDeck];
+//    _myDeck = [[PlayingCardDeck alloc] init];
+//    _myRedDeck = [[ReducedPlayingCardDeck alloc]init];
+//    _cards = [[NSMutableArray alloc] init];
+//    _chosen_cards = [[NSMutableArray alloc] init];
+//    for (int i = 0; i < 30; ++i){
+//        ReducedPlayingCard * c = [self.myRedDeck drawRandCard];
+//        [self.cards addObject:c];
+//        }
 }
 
 /* Main logic in Game.  This receives an index of the button clicked, which corresponds to the
