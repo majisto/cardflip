@@ -24,6 +24,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (UIImage *) cardImage:(PlayingCard *) card{
+    return [UIImage imageNamed:card.ischosen ? @"white_image" : @"squirtle"];
+}
 
 @end
