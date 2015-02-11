@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Card.h"
 #import "PlayingCard.h"
+#import "ExpandedPlayingCard.h"
+#import "ExpandedPlayingCardDeck.h"
 
 @interface MatchingGame : NSObject
 - (instancetype) initWithArray:(NSArray *)count;

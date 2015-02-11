@@ -7,6 +7,7 @@
 //
 
 #import "ViewController_Abstract.h"
+#import "MatchingGame.h"
 
 @interface ViewController_Expanded : ViewController_Abstract
 

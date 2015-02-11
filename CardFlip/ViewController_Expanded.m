@@ -9,7 +9,7 @@
 #import "ViewController_Expanded.h"
 
 @interface ViewController_Expanded ()
-
+@property (strong, nonatomic) MatchingGame *game;
 @end
 
 @implementation ViewController_Expanded
@@ -26,6 +26,11 @@
 
 - (UIImage *) cardImage:(PlayingCard *) card{
     return [UIImage imageNamed:card.ischosen ? @"white_image" : @"bulba"];
+}
+
+-(MatchingGame *) game{
+    if (!_game) {_game = [[MatchingGame alloc] initWithArray:@[@"30",@"1"]];}
+    return _game;
 }
 
 @end

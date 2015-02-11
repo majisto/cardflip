@@ -10,4 +10,12 @@
 
 @implementation ExpandedPlayingCard
 
+- (NSArray *)validSuits{
+    return @[@"♥",@"♦",@"♠",@"♣",@"☀",@"☾",@"♆",@"❧"];
+}
+
+- (NSDictionary *)suitColors{
+    return nil;
+}
+
 @end

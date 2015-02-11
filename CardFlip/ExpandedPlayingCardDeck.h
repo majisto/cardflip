@@ -7,7 +7,8 @@
 //
 
 #import "Deck.h"
+#import "ExpandedPlayingCard.h"
 
 @interface ExpandedPlayingCardDeck : Deck
-
+-(ExpandedPlayingCard *) drawRandCard;
 @end

@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (strong, nonatomic) PlayingCardDeck *myDeck;
 @property (strong, nonatomic) ReducedPlayingCardDeck *myRedDeck;
+@property (strong, nonatomic) ExpandedPlayingCardDeck *myExpDeck;
 
 @property (nonatomic, readwrite) BOOL three_card;
 
@@ -111,7 +112,16 @@
             }
         }
         else{
-            //Expanded
+            _myExpDeck = [[ExpandedPlayingCardDeck alloc] init];
+            for (int i = 0; i < cardnum; ++i){
+                ExpandedPlayingCard * c = [self.myExpDeck drawRandCard];
+                if (c)
+                    [self.cards addObject:c];
+                else{
+                    self = nil;
+                    break;
+                }
+            }
         }
     }
     _peeked = false;
@@ -133,6 +143,12 @@
             _myDeck = [[PlayingCardDeck alloc] init];
             for (int i = 0; i < 30; ++i){
                 PlayingCard * c = [self.myDeck drawRandCard];
+                [self.cards addObject:c];
+            }
+        case 2:
+            _myExpDeck = [[ExpandedPlayingCardDeck alloc] init];
+            for (int i = 0; i < 30; ++i){
+                ExpandedPlayingCard* c = [self.myExpDeck drawRandCard];
                 [self.cards addObject:c];
             }
         default:
