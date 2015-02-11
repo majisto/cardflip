@@ -18,6 +18,8 @@
 		A80531B31A719FC6007B04FD /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A80531B21A719FC6007B04FD /* PlayingCard.m */; };
 		A88EBA631A7AD2EC00083A69 /* MatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A88EBA621A7AD2EC00083A69 /* MatchingGame.m */; };
 		A8C0311E1A8AA6C70046A8DA /* RSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C0311D1A8AA6C70046A8DA /* RSCard.m */; };
+		A8C031221A8AF44F0046A8DA /* ReducedPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C031211A8AF44F0046A8DA /* ReducedPlayingCard.m */; };
+		A8C031251A8AF4A60046A8DA /* ReducedPlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C031241A8AF4A60046A8DA /* ReducedPlayingCardDeck.m */; };
 		A8DE37FF1A895FAA005EA3A1 /* ViewController_Reduced.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE37FE1A895FAA005EA3A1 /* ViewController_Reduced.m */; };
 		A8DE38021A89656A005EA3A1 /* ViewController_Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE38011A89656A005EA3A1 /* ViewController_Expanded.m */; };
 		A8DE38051A896681005EA3A1 /* ViewController_Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE38041A896681005EA3A1 /* ViewController_Abstract.m */; };
@@ -57,6 +59,10 @@
 		A88EBA621A7AD2EC00083A69 /* MatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchingGame.m; sourceTree = "<group>"; };
 		A8C0311C1A8AA6C70046A8DA /* RSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCard.h; sourceTree = "<group>"; };
 		A8C0311D1A8AA6C70046A8DA /* RSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCard.m; sourceTree = "<group>"; };
+		A8C031201A8AF44F0046A8DA /* ReducedPlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReducedPlayingCard.h; sourceTree = "<group>"; };
+		A8C031211A8AF44F0046A8DA /* ReducedPlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReducedPlayingCard.m; sourceTree = "<group>"; };
+		A8C031231A8AF4A60046A8DA /* ReducedPlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReducedPlayingCardDeck.h; sourceTree = "<group>"; };
+		A8C031241A8AF4A60046A8DA /* ReducedPlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReducedPlayingCardDeck.m; sourceTree = "<group>"; };
 		A8DE37FD1A895FAA005EA3A1 /* ViewController_Reduced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_Reduced.h; sourceTree = "<group>"; };
 		A8DE37FE1A895FAA005EA3A1 /* ViewController_Reduced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_Reduced.m; sourceTree = "<group>"; };
 		A8DE38001A89656A005EA3A1 /* ViewController_Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_Expanded.h; sourceTree = "<group>"; };
@@ -112,14 +118,7 @@
 				A805318B1A718E90007B04FD /* AppDelegate.h */,
 				A805318C1A718E90007B04FD /* AppDelegate.m */,
 				A80531911A718E90007B04FD /* Main.storyboard */,
-				A805318E1A718E90007B04FD /* ViewController.h */,
-				A805318F1A718E90007B04FD /* ViewController.m */,
-				A8DE38001A89656A005EA3A1 /* ViewController_Expanded.h */,
-				A8DE38011A89656A005EA3A1 /* ViewController_Expanded.m */,
-				A8DE37FD1A895FAA005EA3A1 /* ViewController_Reduced.h */,
-				A8DE37FE1A895FAA005EA3A1 /* ViewController_Reduced.m */,
-				A8DE38031A896681005EA3A1 /* ViewController_Abstract.h */,
-				A8DE38041A896681005EA3A1 /* ViewController_Abstract.m */,
+				A8C0311F1A8AE9D30046A8DA /* ViewControllers */,
 				A80531961A718E90007B04FD /* LaunchScreen.xib */,
 				A80531941A718E90007B04FD /* Images.xcassets */,
 				A80531871A718E90007B04FD /* Supporting Files */,
@@ -168,8 +167,27 @@
 				A88EBA621A7AD2EC00083A69 /* MatchingGame.m */,
 				A8C0311C1A8AA6C70046A8DA /* RSCard.h */,
 				A8C0311D1A8AA6C70046A8DA /* RSCard.m */,
+				A8C031201A8AF44F0046A8DA /* ReducedPlayingCard.h */,
+				A8C031211A8AF44F0046A8DA /* ReducedPlayingCard.m */,
+				A8C031231A8AF4A60046A8DA /* ReducedPlayingCardDeck.h */,
+				A8C031241A8AF4A60046A8DA /* ReducedPlayingCardDeck.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A8C0311F1A8AE9D30046A8DA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A805318E1A718E90007B04FD /* ViewController.h */,
+				A805318F1A718E90007B04FD /* ViewController.m */,
+				A8DE38001A89656A005EA3A1 /* ViewController_Expanded.h */,
+				A8DE38011A89656A005EA3A1 /* ViewController_Expanded.m */,
+				A8DE37FD1A895FAA005EA3A1 /* ViewController_Reduced.h */,
+				A8DE37FE1A895FAA005EA3A1 /* ViewController_Reduced.m */,
+				A8DE38031A896681005EA3A1 /* ViewController_Abstract.h */,
+				A8DE38041A896681005EA3A1 /* ViewController_Abstract.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,8 +298,10 @@
 				A8F0422E1A73749E00924834 /* PlayingCardDeck.m in Sources */,
 				A8F0422B1A73404B00924834 /* Deck.m in Sources */,
 				A8DE38021A89656A005EA3A1 /* ViewController_Expanded.m in Sources */,
+				A8C031251A8AF4A60046A8DA /* ReducedPlayingCardDeck.m in Sources */,
 				A88EBA631A7AD2EC00083A69 /* MatchingGame.m in Sources */,
 				A80531AF1A719E1D007B04FD /* Card.m in Sources */,
+				A8C031221A8AF44F0046A8DA /* ReducedPlayingCard.m in Sources */,
 				A8C0311E1A8AA6C70046A8DA /* RSCard.m in Sources */,
 				A8DE38051A896681005EA3A1 /* ViewController_Abstract.m in Sources */,
 			);

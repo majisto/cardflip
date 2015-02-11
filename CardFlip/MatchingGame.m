@@ -9,6 +9,8 @@
 #import "MatchingGame.h"
 #import "Deck.h"
 #import "PlayingCardDeck.h"
+#import "ReducedPlayingCardDeck.h"
+#import "ReducedPlayingCard.h"
 
 @interface MatchingGame ()
 @property (nonatomic, readwrite) int total_score;
@@ -17,6 +19,7 @@
 @property (nonatomic, readwrite) int previous_score;
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (strong, nonatomic) PlayingCardDeck *myDeck;
+@property (strong, nonatomic) ReducedPlayingCardDeck *myRedDeck;
 @property (nonatomic, readwrite) BOOL three_card;
 @property (nonatomic, strong) NSMutableArray *chosen_cards;
 @property (nonatomic, strong) NSMutableArray *game_scores;
@@ -86,6 +89,17 @@
                 break;
             }
         }
+        _myRedDeck = [[ReducedPlayingCardDeck alloc] init];
+        for (int i = 0; i < count; ++i){
+            ReducedPlayingCard * c = [self.myRedDeck drawRandCard];
+            NSLog(@"Reduced Playing card is: %@", c.description);
+            if (c)
+                [self.cards addObject:c];
+            else{
+                self = nil;
+                break;
+            }
+        }
     }
     _peeked = false;
     return self;
@@ -95,7 +109,8 @@
  also calculate the new average score. */
 - (void) resetGame{
     self.peeked = false;
-    self.games_played ++;    double_t gp = self.games_played;
+    self.games_played ++;
+    double_t gp = self.games_played;
     self.average_score = (((gp - 1) / gp) * self.average_score) + ((1/gp) * self.total_score);
     self.previous_score = 0;
     self.total_score = 0;

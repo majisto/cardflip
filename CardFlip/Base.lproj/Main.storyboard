@@ -17,23 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-aX-apu">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="charie">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                    <rect key="frame" x="16" y="72" width="58" height="73"/>
-                                </variation>
-                                <connections>
-                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lQ9-Ou-5vP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dF-A7-NTS">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -468,15 +451,29 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crC-CR-AHR">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="158" y="578" width="147" height="33"/>
                                 </variation>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rP0-wA-NYd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8W-TJ-3bV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="charie">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="72" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4EK-sh-ZO4"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eqA-QP-SEK">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                                <color key="backgroundColor" red="0.51709980867346939" green="0.15022420401054137" blue="0.031082764157852587" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.3205915178571429" green="0.08239985138471137" blue="0.034166015416547055" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="2"/>
                                     <segment title="3"/>
@@ -486,14 +483,13 @@
                                     <rect key="frame" x="68" y="580" width="77" height="29"/>
                                 </variation>
                                 <connections>
-                                    <action selector="changeModeSegmented:" destination="vXZ-lx-hvc" eventType="touchDown" id="U8H-ei-W8t"/>
+                                    <action selector="changeModeSegmented:" destination="vXZ-lx-hvc" eventType="valueChanged" id="83v-Aw-28f"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.66759008290816324" green="0.19201240548645973" blue="0.038208099630759149" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.21627869897959184" green="0.055588908816790232" blue="0.023049210450103733" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="1RT-aX-apu"/>
                                 <exclude reference="3dF-A7-NTS"/>
                                 <exclude reference="WXQ-yt-T90"/>
                                 <exclude reference="jDV-3f-zu6"/>
@@ -526,12 +522,12 @@
                                 <exclude reference="0HH-0T-rOz"/>
                                 <exclude reference="as8-eB-mUB"/>
                                 <exclude reference="crC-CR-AHR"/>
-                                <exclude reference="rP0-wA-NYd"/>
+                                <exclude reference="C8W-TJ-3bV"/>
+                                <exclude reference="eqA-QP-SEK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="1RT-aX-apu"/>
                                 <include reference="3dF-A7-NTS"/>
                                 <include reference="WXQ-yt-T90"/>
                                 <include reference="jDV-3f-zu6"/>
@@ -564,7 +560,8 @@
                                 <include reference="0HH-0T-rOz"/>
                                 <include reference="as8-eB-mUB"/>
                                 <include reference="crC-CR-AHR"/>
-                                <include reference="rP0-wA-NYd"/>
+                                <include reference="C8W-TJ-3bV"/>
+                                <include reference="eqA-QP-SEK"/>
                             </mask>
                         </variation>
                     </view>
@@ -577,13 +574,12 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="segControl" destination="rP0-wA-NYd" id="o7S-Xw-bC9"/>
+                        <outlet property="segControl" destination="eqA-QP-SEK" id="xcf-XS-SbB"/>
                         <outlet property="totalScore" destination="crC-CR-AHR" id="FCO-qm-LzY"/>
                         <outletCollection property="buttonArray" destination="8HZ-g0-MbQ" id="8r8-MN-DZ0"/>
                         <outletCollection property="buttonArray" destination="jDV-3f-zu6" id="KPC-Sz-2v2"/>
                         <outletCollection property="buttonArray" destination="WXQ-yt-T90" id="q8N-ua-URe"/>
                         <outletCollection property="buttonArray" destination="3dF-A7-NTS" id="ezX-LT-sJr"/>
-                        <outletCollection property="buttonArray" destination="1RT-aX-apu" id="Fir-Ku-veN"/>
                         <outletCollection property="buttonArray" destination="gWz-H3-To5" id="9JS-oV-sXI"/>
                         <outletCollection property="buttonArray" destination="Ak0-ZN-Hmx" id="oCS-RP-TUy"/>
                         <outletCollection property="buttonArray" destination="5XB-KO-RQn" id="mGn-gy-0EQ"/>
@@ -609,6 +605,7 @@
                         <outletCollection property="buttonArray" destination="pou-3r-Lo4" id="Ika-CG-ZV1"/>
                         <outletCollection property="buttonArray" destination="sdP-Xa-DMd" id="bGw-yL-9PK"/>
                         <outletCollection property="buttonArray" destination="6kT-jP-Fa5" id="3nV-Ia-AHv"/>
+                        <outletCollection property="buttonArray" destination="C8W-TJ-3bV" id="Rys-CF-Fhp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -647,23 +644,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-t4-CeE">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="squirtle">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                    <rect key="frame" x="16" y="72" width="58" height="73"/>
-                                </variation>
-                                <connections>
-                                    <action selector="card_click:" destination="B9y-ze-fIY" eventType="touchUpInside" id="fHz-rb-EWO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rub-xy-tJI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1113,17 +1093,30 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulG-EQ-d3U">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="158" y="578" width="147" height="33"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-rQ-zyM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="squirtle">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="72" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="B9y-ze-fIY" eventType="touchUpInside" id="CAo-tO-33H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.02371125066643608" green="0.55380621171039868" blue="0.8338448660714286" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="TPm-t4-CeE"/>
                                 <exclude reference="rub-xy-tJI"/>
                                 <exclude reference="Gdr-kf-wn3"/>
                                 <exclude reference="SHz-xv-mfI"/>
@@ -1157,11 +1150,11 @@
                                 <exclude reference="4qs-0r-oie"/>
                                 <exclude reference="eVm-sU-egd"/>
                                 <exclude reference="ulG-EQ-d3U"/>
+                                <exclude reference="bMo-rQ-zyM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="TPm-t4-CeE"/>
                                 <include reference="rub-xy-tJI"/>
                                 <include reference="Gdr-kf-wn3"/>
                                 <include reference="SHz-xv-mfI"/>
@@ -1195,6 +1188,7 @@
                                 <include reference="4qs-0r-oie"/>
                                 <include reference="eVm-sU-egd"/>
                                 <include reference="ulG-EQ-d3U"/>
+                                <include reference="bMo-rQ-zyM"/>
                             </mask>
                         </variation>
                     </view>
@@ -1213,7 +1207,6 @@
                         <outletCollection property="buttonArray" destination="SHz-xv-mfI" id="a72-XK-Zw3"/>
                         <outletCollection property="buttonArray" destination="Gdr-kf-wn3" id="kPj-wt-RAv"/>
                         <outletCollection property="buttonArray" destination="rub-xy-tJI" id="UHE-kd-Col"/>
-                        <outletCollection property="buttonArray" destination="TPm-t4-CeE" id="2TT-PH-IOZ"/>
                         <outletCollection property="buttonArray" destination="nho-Bk-Loa" id="Loa-Fv-2PN"/>
                         <outletCollection property="buttonArray" destination="U9b-fA-Hwk" id="bem-Tt-CfN"/>
                         <outletCollection property="buttonArray" destination="fMX-HC-72D" id="bPa-O1-5EC"/>
@@ -1239,6 +1232,7 @@
                         <outletCollection property="buttonArray" destination="nbN-Yd-Yca" id="JFf-N2-FoN"/>
                         <outletCollection property="buttonArray" destination="mLx-hF-rvd" id="Niw-W4-7Bn"/>
                         <outletCollection property="buttonArray" destination="16X-Go-Nrr" id="LXo-3z-yA5"/>
+                        <outletCollection property="buttonArray" destination="bMo-rQ-zyM" id="ZQT-w0-fMr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O5-IL-0YE" sceneMemberID="firstResponder"/>
@@ -1324,7 +1318,7 @@ That Hobbit is terrorizing Deep Sea Research Center! Strago and Captain Picard a
                                 </variation>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.66759008289999999" green="0.19201240550000001" blue="0.038208099629999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.21627869899999999" green="0.055588908819999998" blue="0.02304921045" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="XnQ-nz-I1E"/>
@@ -1395,23 +1389,6 @@ That Hobbit is terrorizing Deep Sea Research Center! Strago and Captain Picard a
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR2-NM-Lew">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" backgroundImage="bulba">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                    <rect key="frame" x="16" y="72" width="58" height="73"/>
-                                </variation>
-                                <connections>
-                                    <action selector="card_click:" destination="nub-ps-mue" eventType="touchUpInside" id="aLT-X2-bT3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVS-IB-YJK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1846,7 +1823,7 @@ That Hobbit is terrorizing Deep Sea Research Center! Strago and Captain Picard a
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgn-7s-ahK">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="158" y="578" width="147" height="33"/>
@@ -1867,11 +1844,24 @@ That Hobbit is terrorizing Deep Sea Research Center! Strago and Captain Picard a
                                     <action selector="changeModeSegmented:" destination="nub-ps-mue" eventType="valueChanged" id="1j5-VK-Td7"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP6-d8-0KA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="bulba">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <rect key="frame" x="16" y="72" width="58" height="73"/>
+                                </variation>
+                                <connections>
+                                    <action selector="card_click:" destination="nub-ps-mue" eventType="touchUpInside" id="Ctt-tK-VxI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10588236149999999" green="0.55686277149999996" blue="0.090196080509999998" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="bR2-NM-Lew"/>
                                 <exclude reference="IVS-IB-YJK"/>
                                 <exclude reference="XWb-U4-6Zb"/>
                                 <exclude reference="P9R-Ru-LEu"/>
@@ -1905,11 +1895,11 @@ That Hobbit is terrorizing Deep Sea Research Center! Strago and Captain Picard a
                                 <exclude reference="kIj-lm-ldL"/>
                                 <exclude reference="wgn-7s-ahK"/>
                                 <exclude reference="W7B-HM-i98"/>
+                                <exclude reference="lP6-d8-0KA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="bR2-NM-Lew"/>
                                 <include reference="IVS-IB-YJK"/>
                                 <include reference="XWb-U4-6Zb"/>
                                 <include reference="P9R-Ru-LEu"/>
@@ -1943,6 +1933,7 @@ That Hobbit is terrorizing Deep Sea Research Center! Strago and Captain Picard a
                                 <include reference="kIj-lm-ldL"/>
                                 <include reference="wgn-7s-ahK"/>
                                 <include reference="W7B-HM-i98"/>
+                                <include reference="lP6-d8-0KA"/>
                             </mask>
                         </variation>
                     </view>
@@ -1961,7 +1952,6 @@ That Hobbit is terrorizing Deep Sea Research Center! Strago and Captain Picard a
                         <outletCollection property="buttonArray" destination="P9R-Ru-LEu" id="skj-HP-Cri"/>
                         <outletCollection property="buttonArray" destination="XWb-U4-6Zb" id="GST-Zv-Qah"/>
                         <outletCollection property="buttonArray" destination="IVS-IB-YJK" id="QEc-oL-5Li"/>
-                        <outletCollection property="buttonArray" destination="bR2-NM-Lew" id="9pf-j3-lhR"/>
                         <outletCollection property="buttonArray" destination="fCb-m0-JOt" id="zeI-nU-Jke"/>
                         <outletCollection property="buttonArray" destination="rF3-hj-YjJ" id="ZlC-7L-0oT"/>
                         <outletCollection property="buttonArray" destination="krM-gP-cjY" id="Vfn-rD-WQf"/>
@@ -1987,6 +1977,7 @@ That Hobbit is terrorizing Deep Sea Research Center! Strago and Captain Picard a
                         <outletCollection property="buttonArray" destination="DQX-sf-DQL" id="NxX-aR-YTy"/>
                         <outletCollection property="buttonArray" destination="k4N-7T-aUf" id="C82-ze-50P"/>
                         <outletCollection property="buttonArray" destination="MuV-bX-Gnj" id="bgQ-PB-X7g"/>
+                        <outletCollection property="buttonArray" destination="lP6-d8-0KA" id="agU-QR-y5r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqD-QQ-Ys8" sceneMemberID="firstResponder"/>
@@ -2067,7 +2058,7 @@ Darth Vader taught Emperor Palpatine how to use the Arkenstone. "The Witch-King,
     </scenes>
     <resources>
         <image name="bulba" width="900" height="1072"/>
-        <image name="charie" width="796" height="1004"/>
+        <image name="charie" width="999" height="799"/>
         <image name="fiber-32" width="32" height="32"/>
         <image name="fires-32" width="32" height="32"/>
         <image name="squirtle" width="700" height="647"/>
