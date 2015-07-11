@@ -1,1 +1,1 @@
-Name: Daniel Barton DurbinEID: dbd453Email: majisto@gmail.comLength of time to complete: 8 hoursComments:  I was using the iphone6 to emulate it and have the size set to 4.7Ó.  It appears ok on the iphone5, but looks pretty bad on iphone4S.  I hope that is ok?
+
